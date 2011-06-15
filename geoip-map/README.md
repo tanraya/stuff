@@ -1,4 +1,4 @@
-# Script that generate internet usage world map.
+# Script that generates internet usage world map.
 
 Based on GeoIp and Rmagick.
 Sample image is here: [https://github.com/tanraya/stuff/blob/master/geoip-map/map.png](https://github.com/tanraya/stuff/blob/master/geoip-map/map.png)
