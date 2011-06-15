@@ -7,3 +7,5 @@ Sample image is here: [https://github.com/tanraya/stuff/blob/master/geoip-map/ma
 
     $ bundle
     $ ruby geoip-map.rb
+
+and then open ./map.png in image viewer.
