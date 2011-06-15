@@ -5,5 +5,5 @@ Sample image is here: [https://github.com/tanraya/stuff/blob/master/geoip-map/ma
 
 ### How to use:
 
- $ bundle
- $ ruby geoip-map.rb
+    $ bundle
+    $ ruby geoip-map.rb
