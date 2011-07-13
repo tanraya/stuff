@@ -1,0 +1,495 @@
+##
+##  ca-bundle.crt -- Bundle of CA Root Certificates
+##
+##  This is a bundle of X.509 certificates of public
+##  Certificate Authorities (CA). These were automatically
+##  extracted from Mozilla's NSS v3.7 library's certificate database
+##
+##  It contains the certificates in both
+##  plain text and PEM format and therefore can be directly used
+##  with an Apache+mod_ssl webserver for SSL client authentication.
+##  Just configure this file as the SSLCACertificateFile.
+##
+##  (SKIPME)
+##
+
+ABAecom (sub., Am. Bankers Assn.) Root CA
+=========================================
+MD5 Fingerprint=41:B8:07:F7:A8:D1:09:EE:B4:9A:8E:70:4D:FC:1B:78
+PEM data:
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIDtTCCAp2gAwIBAgIRANAeQJAAAEZSAAAAAQAAAAQwDQYJKoZIhvcNAQEFBQAw
+gYkxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJEQzETMBEGA1UEBxMKV2FzaGluZ3Rv
+bjEXMBUGA1UEChMOQUJBLkVDT00sIElOQy4xGTAXBgNVBAMTEEFCQS5FQ09NIFJv
+b3QgQ0ExJDAiBgkqhkiG9w0BCQEWFWFkbWluQGRpZ3NpZ3RydXN0LmNvbTAeFw05
+OTA3MTIxNzMzNTNaFw0wOTA3MDkxNzMzNTNaMIGJMQswCQYDVQQGEwJVUzELMAkG
+A1UECBMCREMxEzARBgNVBAcTCldhc2hpbmd0b24xFzAVBgNVBAoTDkFCQS5FQ09N
+LCBJTkMuMRkwFwYDVQQDExBBQkEuRUNPTSBSb290IENBMSQwIgYJKoZIhvcNAQkB
+FhVhZG1pbkBkaWdzaWd0cnVzdC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCx0xHgeVVDBwhMywVCAOINg0Y95JO6tgbTDVm9PsHOQ2cBiiGo77zM
+0KLMsFWWU4RmBQDaREmA2FQKpSWGlO1jVv9wbKOhGdJ4vmgqRF4vz8wYXke8OrFG
+PR7wuSw0X4x8TAgpnUBV6zx9g9618PeKgw6hTLQ6pbNfWiKX7BmbwQVo/ea3qZGU
+LOR4SCQaJRk665WcOQqKz0Ky8BzVX/tr7WhWezkscjiw7pOp03t3POtxA6k4ShZs
+iSrK2jMTecJVjO2cu/LLWxD4LmE1xilMKtAqY9FlWbT4zfn0AIS2V0KFnTKo+SpU
++/94Qby9cSj0u5C8/5Y0BONFnqFGKECBAgMBAAGjFjAUMBIGA1UdEwEB/wQIMAYB
+Af8CAQgwDQYJKoZIhvcNAQEFBQADggEBAARvJYbk5pYntNlCwNDJALF/VD6Hsm0k
+qS8Kfv2kRLD4VAe9G52dyntQJHsRW0mjpr8SdNWJt7cvmGQlFLdh6X9ggGvTZOir
+vRrWUfrAtF13Gn9kCF55xgVM8XrdTX3O5kh7VNJhkoHWG9YA8A6eKHegTYjHInYZ
+w8eeG6Z3ePhfm1bR8PIXrI6dWeYf/le22V7hXZ9F7GFoGUHhsiAm/lowdiT/QHI8
+eZ98IkirRs3bs4Ysj78FQdPB4xTjQRcm0HyncUwZ6EoPclgxfexgeqMiKL0ZJGA/
+O4dzwGvky663qyVDslUte6sGDnVdNOVdc22esnVApVnJTzFxiNmIf1Q=
+-----END TRUSTED CERTIFICATE-----
+Certificate Ingredients:
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            d0:1e:40:90:00:00:46:52:00:00:00:01:00:00:00:04
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=DC, L=Washington, O=ABA.ECOM, INC., CN=ABA.ECOM Root CA/Email=admin@digsigtrust.com
+        Validity
+            Not Before: Jul 12 17:33:53 1999 GMT
+            Not After : Jul  9 17:33:53 2009 GMT
+        Subject: C=US, ST=DC, L=Washington, O=ABA.ECOM, INC., CN=ABA.ECOM Root CA/Email=admin@digsigtrust.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:b1:d3:11:e0:79:55:43:07:08:4c:cb:05:42:00:
+                    e2:0d:83:46:3d:e4:93:ba:b6:06:d3:0d:59:bd:3e:
+                    c1:ce:43:67:01:8a:21:a8:ef:bc:cc:d0:a2:cc:b0:
+                    55:96:53:84:66:05:00:da:44:49:80:d8:54:0a:a5:
+                    25:86:94:ed:63:56:ff:70:6c:a3:a1:19:d2:78:be:
+                    68:2a:44:5e:2f:cf:cc:18:5e:47:bc:3a:b1:46:3d:
+                    1e:f0:b9:2c:34:5f:8c:7c:4c:08:29:9d:40:55:eb:
+                    3c:7d:83:de:b5:f0:f7:8a:83:0e:a1:4c:b4:3a:a5:
+                    b3:5f:5a:22:97:ec:19:9b:c1:05:68:fd:e6:b7:a9:
+                    91:94:2c:e4:78:48:24:1a:25:19:3a:eb:95:9c:39:
+                    0a:8a:cf:42:b2:f0:1c:d5:5f:fb:6b:ed:68:56:7b:
+                    39:2c:72:38:b0:ee:93:a9:d3:7b:77:3c:eb:71:03:
+                    a9:38:4a:16:6c:89:2a:ca:da:33:13:79:c2:55:8c:
+                    ed:9c:bb:f2:cb:5b:10:f8:2e:61:35:c6:29:4c:2a:
+                    d0:2a:63:d1:65:59:b4:f8:cd:f9:f4:00:84:b6:57:
+                    42:85:9d:32:a8:f9:2a:54:fb:ff:78:41:bc:bd:71:
+                    28:f4:bb:90:bc:ff:96:34:04:e3:45:9e:a1:46:28:
+                    40:81
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:8
+    Signature Algorithm: sha1WithRSAEncryption
+        04:6f:25:86:e4:e6:96:27:b4:d9:42:c0:d0:c9:00:b1:7f:54:
+        3e:87:b2:6d:24:a9:2f:0a:7e:fd:a4:44:b0:f8:54:07:bd:1b:
+        9d:9d:ca:7b:50:24:7b:11:5b:49:a3:a6:bf:12:74:d5:89:b7:
+        b7:2f:98:64:25:14:b7:61:e9:7f:60:80:6b:d3:64:e8:ab:bd:
+        1a:d6:51:fa:c0:b4:5d:77:1a:7f:64:08:5e:79:c6:05:4c:f1:
+        7a:dd:4d:7d:ce:e6:48:7b:54:d2:61:92:81:d6:1b:d6:00:f0:
+        0e:9e:28:77:a0:4d:88:c7:22:76:19:c3:c7:9e:1b:a6:77:78:
+        f8:5f:9b:56:d1:f0:f2:17:ac:8e:9d:59:e6:1f:fe:57:b6:d9:
+        5e:e1:5d:9f:45:ec:61:68:19:41:e1:b2:20:26:fe:5a:30:76:
+        24:ff:40:72:3c:79:9f:7c:22:48:ab:46:cd:db:b3:86:2c:8f:
+        bf:05:41:d3:c1:e3:14:e3:41:17:26:d0:7c:a7:71:4c:19:e8:
+        4a:0f:72:58:31:7d:ec:60:7a:a3:22:28:bd:19:24:60:3f:3b:
+        87:73:c0:6b:e4:cb:ae:b7:ab:25:43:b2:55:2d:7b:ab:06:0e:
+        75:5d:34:e5:5d:73:6d:9e:b2:75:40:a5:59:c9:4f:31:71:88:
+        d9:88:7f:54
+
+AddTrust External Root
+======================
+MD5 Fingerprint=1D:35:54:04:85:78:B0:3F:42:42:4D:BF:20:73:0A:3F
+PEM data:
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIENjCCAx6gAwIBAgIBATANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQGEwJTRTEU
+MBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFkZFRydXN0IEV4dGVybmFs
+IFRUUCBOZXR3b3JrMSIwIAYDVQQDExlBZGRUcnVzdCBFeHRlcm5hbCBDQSBSb290
+MB4XDTAwMDUzMDEwNDgzOFoXDTIwMDUzMDEwNDgzOFowbzELMAkGA1UEBhMCU0Ux
+FDASBgNVBAoTC0FkZFRydXN0IEFCMSYwJAYDVQQLEx1BZGRUcnVzdCBFeHRlcm5h
+bCBUVFAgTmV0d29yazEiMCAGA1UEAxMZQWRkVHJ1c3QgRXh0ZXJuYWwgQ0EgUm9v
+dDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALf3GjPm8gAELTngTlvt
+H7xsD821+iO2zt6bETOXpClMfZOfvUq8k+0DGuOPz+VtUFrWlymUWoCwSXrbLpX9
+uMq/NzgtHj6RQa1wVsfwTz/oMp50ysiQVOnGXw94nZpAPA6sYapeFI+eh6FqUNzX
+mk6vBbOmcZSccbNQYArHE504B4YCqOmoaSYYkKtMsE8jqzpPhNjfzp/haW+710LX
+a0Tkx63ubUFfclpxCDezeWWkWaCUN/cALw3CknLa0Dhy2xSoRcRdKn23tNbE7qzN
+E0S3ySvdQwAl+mG5aWpYIxG3pzOPVnVZ9c0p10a3CitlttNCbxWyuHv77+ldU9U0
+WicCAwEAAaOB3DCB2TAdBgNVHQ4EFgQUrb2YejS0Jvf6xCZU7wO94CTLVBowCwYD
+VR0PBAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wgZkGA1UdIwSBkTCBjoAUrb2YejS0
+Jvf6xCZU7wO94CTLVBqhc6RxMG8xCzAJBgNVBAYTAlNFMRQwEgYDVQQKEwtBZGRU
+cnVzdCBBQjEmMCQGA1UECxMdQWRkVHJ1c3QgRXh0ZXJuYWwgVFRQIE5ldHdvcmsx
+IjAgBgNVBAMTGUFkZFRydXN0IEV4dGVybmFsIENBIFJvb3SCAQEwDQYJKoZIhvcN
+AQEFBQADggEBALCb4IUlwtYj4g+WBpKdQZic2YR5gdkeWxQHIzZlj7DYd7usQWxH
+YINRsPkyPef89iYTx4AWpb9a/IfPeHmJIZriTAcKhjW88t5RxNKWt9x+Tu5w/Rw5
+6wwCURQtjr0W4MHfRnXnJK3s9EK0hZNwEGe6nQY1ShjTK3rMUUKhemPR5ruhxSvC
+Nr4TDea9Y355e6cJDUCrat2PisP29owaQgVR1EX1n6diIWgVIEM8med8vSTYqZEX
+c4g/VhsxOBi0cQ+azcgOno4uG+GMmIPLHzHxREzGBHNJdmAPx/i9F4BrLunMTA5a
+mnkPIAou1Z5jJh5VkpTYghdae9C8x49OhgQ=
+-----END TRUSTED CERTIFICATE-----
+Certificate Ingredients:
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust External CA Root
+        Validity
+            Not Before: May 30 10:48:38 2000 GMT
+            Not After : May 30 10:48:38 2020 GMT
+        Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust External CA Root
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:b7:f7:1a:33:e6:f2:00:04:2d:39:e0:4e:5b:ed:
+                    1f:bc:6c:0f:cd:b5:fa:23:b6:ce:de:9b:11:33:97:
+                    a4:29:4c:7d:93:9f:bd:4a:bc:93:ed:03:1a:e3:8f:
+                    cf:e5:6d:50:5a:d6:97:29:94:5a:80:b0:49:7a:db:
+                    2e:95:fd:b8:ca:bf:37:38:2d:1e:3e:91:41:ad:70:
+                    56:c7:f0:4f:3f:e8:32:9e:74:ca:c8:90:54:e9:c6:
+                    5f:0f:78:9d:9a:40:3c:0e:ac:61:aa:5e:14:8f:9e:
+                    87:a1:6a:50:dc:d7:9a:4e:af:05:b3:a6:71:94:9c:
+                    71:b3:50:60:0a:c7:13:9d:38:07:86:02:a8:e9:a8:
+                    69:26:18:90:ab:4c:b0:4f:23:ab:3a:4f:84:d8:df:
+                    ce:9f:e1:69:6f:bb:d7:42:d7:6b:44:e4:c7:ad:ee:
+                    6d:41:5f:72:5a:71:08:37:b3:79:65:a4:59:a0:94:
+                    37:f7:00:2f:0d:c2:92:72:da:d0:38:72:db:14:a8:
+                    45:c4:5d:2a:7d:b7:b4:d6:c4:ee:ac:cd:13:44:b7:
+                    c9:2b:dd:43:00:25:fa:61:b9:69:6a:58:23:11:b7:
+                    a7:33:8f:56:75:59:f5:cd:29:d7:46:b7:0a:2b:65:
+                    b6:d3:42:6f:15:b2:b8:7b:fb:ef:e9:5d:53:d5:34:
+                    5a:27
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                AD:BD:98:7A:34:B4:26:F7:FA:C4:26:54:EF:03:BD:E0:24:CB:54:1A
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Authority Key Identifier: 
+                keyid:AD:BD:98:7A:34:B4:26:F7:FA:C4:26:54:EF:03:BD:E0:24:CB:54:1A
+                DirName:/C=SE/O=AddTrust AB/OU=AddTrust External TTP Network/CN=AddTrust External CA Root
+                serial:01
+
+    Signature Algorithm: sha1WithRSAEncryption
+        b0:9b:e0:85:25:c2:d6:23:e2:0f:96:06:92:9d:41:98:9c:d9:
+        84:79:81:d9:1e:5b:14:07:23:36:65:8f:b0:d8:77:bb:ac:41:
+        6c:47:60:83:51:b0:f9:32:3d:e7:fc:f6:26:13:c7:80:16:a5:
+        bf:5a:fc:87:cf:78:79:89:21:9a:e2:4c:07:0a:86:35:bc:f2:
+        de:51:c4:d2:96:b7:dc:7e:4e:ee:70:fd:1c:39:eb:0c:02:51:
+        14:2d:8e:bd:16:e0:c1:df:46:75:e7:24:ad:ec:f4:42:b4:85:
+        93:70:10:67:ba:9d:06:35:4a:18:d3:2b:7a:cc:51:42:a1:7a:
+        63:d1:e6:bb:a1:c5:2b:c2:36:be:13:0d:e6:bd:63:7e:79:7b:
+        a7:09:0d:40:ab:6a:dd:8f:8a:c3:f6:f6:8c:1a:42:05:51:d4:
+        45:f5:9f:a7:62:21:68:15:20:43:3c:99:e7:7c:bd:24:d8:a9:
+        91:17:73:88:3f:56:1b:31:38:18:b4:71:0f:9a:cd:c8:0e:9e:
+        8e:2e:1b:e1:8c:98:83:cb:1f:31:f1:44:4c:c6:04:73:49:76:
+        60:0f:c7:f8:bd:17:80:6b:2e:e9:cc:4c:0e:5a:9a:79:0f:20:
+        0a:2e:d5:9e:63:26:1e:55:92:94:d8:82:17:5a:7b:d0:bc:c7:
+        8f:4e:86:04
+
+AddTrust Low-Value Services Root
+================================
+MD5 Fingerprint=1E:42:95:02:33:92:6B:B9:5F:C0:7F:DA:D6:B2:4B:FC
+PEM data:
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIEGDCCAwCgAwIBAgIBATANBgkqhkiG9w0BAQUFADBlMQswCQYDVQQGEwJTRTEU
+MBIGA1UEChMLQWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFkZFRydXN0IFRUUCBOZXR3
+b3JrMSEwHwYDVQQDExhBZGRUcnVzdCBDbGFzcyAxIENBIFJvb3QwHhcNMDAwNTMw
+MTAzODMxWhcNMjAwNTMwMTAzODMxWjBlMQswCQYDVQQGEwJTRTEUMBIGA1UEChML
+QWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFkZFRydXN0IFRUUCBOZXR3b3JrMSEwHwYD
+VQQDExhBZGRUcnVzdCBDbGFzcyAxIENBIFJvb3QwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQCWltQhSWDia+hBBwzexODcEyPNwTXH+9ZOEQpnXvUGW2ul
+CDtbKRY654eyNAbFvAWlA3yCyykQruGIgb3WntP+LVbBFc7jJp0VLhD7Bo8wBN6n
+tGO0/7Gcrjyvd7ZWxbWroulpOj0OM3kyP3CCkplhbY0wCI9xP6ZIVxn4JdxLZlyl
+dI+Yrsj5wAYi56xz36Uu+1LcsRVlIPo1Zmne3yzxbrww2ywkEtvrNTVokMsAsJch
+PXQhI2U0K7t4WaPW4XY5mqRJjox0r26kmqPZm9I4XJuiGMx1I4S+6+JNM3GOGvDC
++Mcdoq0Dlyz4zyXG9rgkMbFjXZJ/Y/AlyVMuH79NAgMBAAGjgdIwgc8wHQYDVR0O
+BBYEFJWxtPCUtr3H2tERCSG+wa9J/RB7MAsGA1UdDwQEAwIBBjAPBgNVHRMBAf8E
+BTADAQH/MIGPBgNVHSMEgYcwgYSAFJWxtPCUtr3H2tERCSG+wa9J/RB7oWmkZzBl
+MQswCQYDVQQGEwJTRTEUMBIGA1UEChMLQWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFk
+ZFRydXN0IFRUUCBOZXR3b3JrMSEwHwYDVQQDExhBZGRUcnVzdCBDbGFzcyAxIENB
+IFJvb3SCAQEwDQYJKoZIhvcNAQEFBQADggEBACxtZBsfzQ3duQH6lmM0MkhHma6X
+7f1yFqZzR1r0693p9db7RcwpiURdv0Y5PejuvE1Uhh4dbOMXJ0PhiVYrqW9yTkkz
+43J8KiOavD7/KCrto/8cI7pDVwlnTUtiBi34/2ydYB7YHEt9tTEv2dB8Xfjea4MY
+eDdXL+gzB2ffHsdrKpV2ro9Xo/D0UrSpUwjP4E/TelOL/bscVjby/rK25Xa71SJl
+pz/+0WatC7xrmYbvP33zGDLKe8bjq2RGlfgmadlVg3sslgf/WSxEo8bl6ancoWOA
+WiFeIc9TVPC6b4nbqKqVz4vjccweGyBECMB6tkD9xOQ14R0WHNC8K47Wcdk=
+-----END TRUSTED CERTIFICATE-----
+Certificate Ingredients:
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=SE, O=AddTrust AB, OU=AddTrust TTP Network, CN=AddTrust Class 1 CA Root
+        Validity
+            Not Before: May 30 10:38:31 2000 GMT
+            Not After : May 30 10:38:31 2020 GMT
+        Subject: C=SE, O=AddTrust AB, OU=AddTrust TTP Network, CN=AddTrust Class 1 CA Root
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:96:96:d4:21:49:60:e2:6b:e8:41:07:0c:de:c4:
+                    e0:dc:13:23:cd:c1:35:c7:fb:d6:4e:11:0a:67:5e:
+                    f5:06:5b:6b:a5:08:3b:5b:29:16:3a:e7:87:b2:34:
+                    06:c5:bc:05:a5:03:7c:82:cb:29:10:ae:e1:88:81:
+                    bd:d6:9e:d3:fe:2d:56:c1:15:ce:e3:26:9d:15:2e:
+                    10:fb:06:8f:30:04:de:a7:b4:63:b4:ff:b1:9c:ae:
+                    3c:af:77:b6:56:c5:b5:ab:a2:e9:69:3a:3d:0e:33:
+                    79:32:3f:70:82:92:99:61:6d:8d:30:08:8f:71:3f:
+                    a6:48:57:19:f8:25:dc:4b:66:5c:a5:74:8f:98:ae:
+                    c8:f9:c0:06:22:e7:ac:73:df:a5:2e:fb:52:dc:b1:
+                    15:65:20:fa:35:66:69:de:df:2c:f1:6e:bc:30:db:
+                    2c:24:12:db:eb:35:35:68:90:cb:00:b0:97:21:3d:
+                    74:21:23:65:34:2b:bb:78:59:a3:d6:e1:76:39:9a:
+                    a4:49:8e:8c:74:af:6e:a4:9a:a3:d9:9b:d2:38:5c:
+                    9b:a2:18:cc:75:23:84:be:eb:e2:4d:33:71:8e:1a:
+                    f0:c2:f8:c7:1d:a2:ad:03:97:2c:f8:cf:25:c6:f6:
+                    b8:24:31:b1:63:5d:92:7f:63:f0:25:c9:53:2e:1f:
+                    bf:4d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                95:B1:B4:F0:94:B6:BD:C7:DA:D1:11:09:21:BE:C1:AF:49:FD:10:7B
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Authority Key Identifier: 
+                keyid:95:B1:B4:F0:94:B6:BD:C7:DA:D1:11:09:21:BE:C1:AF:49:FD:10:7B
+                DirName:/C=SE/O=AddTrust AB/OU=AddTrust TTP Network/CN=AddTrust Class 1 CA Root
+                serial:01
+
+    Signature Algorithm: sha1WithRSAEncryption
+        2c:6d:64:1b:1f:cd:0d:dd:b9:01:fa:96:63:34:32:48:47:99:
+        ae:97:ed:fd:72:16:a6:73:47:5a:f4:eb:dd:e9:f5:d6:fb:45:
+        cc:29:89:44:5d:bf:46:39:3d:e8:ee:bc:4d:54:86:1e:1d:6c:
+        e3:17:27:43:e1:89:56:2b:a9:6f:72:4e:49:33:e3:72:7c:2a:
+        23:9a:bc:3e:ff:28:2a:ed:a3:ff:1c:23:ba:43:57:09:67:4d:
+        4b:62:06:2d:f8:ff:6c:9d:60:1e:d8:1c:4b:7d:b5:31:2f:d9:
+        d0:7c:5d:f8:de:6b:83:18:78:37:57:2f:e8:33:07:67:df:1e:
+        c7:6b:2a:95:76:ae:8f:57:a3:f0:f4:52:b4:a9:53:08:cf:e0:
+        4f:d3:7a:53:8b:fd:bb:1c:56:36:f2:fe:b2:b6:e5:76:bb:d5:
+        22:65:a7:3f:fe:d1:66:ad:0b:bc:6b:99:86:ef:3f:7d:f3:18:
+        32:ca:7b:c6:e3:ab:64:46:95:f8:26:69:d9:55:83:7b:2c:96:
+        07:ff:59:2c:44:a3:c6:e5:e9:a9:dc:a1:63:80:5a:21:5e:21:
+        cf:53:54:f0:ba:6f:89:db:a8:aa:95:cf:8b:e3:71:cc:1e:1b:
+        20:44:08:c0:7a:b6:40:fd:c4:e4:35:e1:1d:16:1c:d0:bc:2b:
+        8e:d6:71:d9
+
+AddTrust Public Services Root
+=============================
+MD5 Fingerprint=C1:62:3E:23:C5:82:73:9C:03:59:4B:2B:E9:77:49:7F
+PEM data:
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIEFTCCAv2gAwIBAgIBATANBgkqhkiG9w0BAQUFADBkMQswCQYDVQQGEwJTRTEU
+MBIGA1UEChMLQWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFkZFRydXN0IFRUUCBOZXR3
+b3JrMSAwHgYDVQQDExdBZGRUcnVzdCBQdWJsaWMgQ0EgUm9vdDAeFw0wMDA1MzAx
+MDQxNTBaFw0yMDA1MzAxMDQxNTBaMGQxCzAJBgNVBAYTAlNFMRQwEgYDVQQKEwtB
+ZGRUcnVzdCBBQjEdMBsGA1UECxMUQWRkVHJ1c3QgVFRQIE5ldHdvcmsxIDAeBgNV
+BAMTF0FkZFRydXN0IFB1YmxpYyBDQSBSb290MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA6Rowj4OIFMEg2Dybjxt+A3S72mnTRqX4jsIMEZBRpS9mVEBV
+6tsfSlbunyNu9DnLoblv8n75XYcmYZ4c+OLspoH4IcUkzBEMP9smcnrHAZcHF/nX
+GCwwfQ56HmIexkvA/X1id9NEHif2P0tEs7c42TkfYNVRknMDtABp4/MUTu7R3AnP
+dzRGULD4EfL+OHn3Bzn+UZKXC1sIXzSGAa2Il+tmzV7R/9x98oTaunet3IAIx6eH
+1lWfl2royBFkuucZKT8Rs3iQhCBSWxHveNCD9tVIkNAwHM+A+WD+eeSI8t0A65RF
+62WUaUC6wNW0uLp9BBGo6zEFlpROWCGOn9Bg/QIDAQABo4HRMIHOMB0GA1UdDgQW
+BBSBPjfYkrAfd59ctKtzquf2NGAv+jALBgNVHQ8EBAMCAQYwDwYDVR0TAQH/BAUw
+AwEB/zCBjgYDVR0jBIGGMIGDgBSBPjfYkrAfd59ctKtzquf2NGAv+qFopGYwZDEL
+MAkGA1UEBhMCU0UxFDASBgNVBAoTC0FkZFRydXN0IEFCMR0wGwYDVQQLExRBZGRU
+cnVzdCBUVFAgTmV0d29yazEgMB4GA1UEAxMXQWRkVHJ1c3QgUHVibGljIENBIFJv
+b3SCAQEwDQYJKoZIhvcNAQEFBQADggEBAAP3FUr4JNojVhaTdt02KLmuG7jD8WS6
+IBh4lSknVwW8fCr0uVFV2ocC3g8WFzH4qnkuCRO7r7IgGRLlk/lL+YPoRNWyQSW/
+iHVv/xD8SlTQX/D67zZzfRs2RcYhbbQVuE7PnFylPVoAjgbjPGsye/Kf8Lb93/Ao
+GEjwxrzQvzSAlsJKsW2Ox5BF3i9nrEUEo3rcVZLJR2bYGozH7ZxOmuASu7VqTITh
+4SINhwBk/ox9Yjllpu9CtoAlEmEBqCQTcAARJl/6NVDFSMwGR+gn2HCNX2TmoUQm
+XiLsks3/QppEIW1cxeMiHV9HEufOX1362KqxMy3ZdvJOOjMMK7MtkAY=
+-----END TRUSTED CERTIFICATE-----
+Certificate Ingredients:
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=SE, O=AddTrust AB, OU=AddTrust TTP Network, CN=AddTrust Public CA Root
+        Validity
+            Not Before: May 30 10:41:50 2000 GMT
+            Not After : May 30 10:41:50 2020 GMT
+        Subject: C=SE, O=AddTrust AB, OU=AddTrust TTP Network, CN=AddTrust Public CA Root
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:e9:1a:30:8f:83:88:14:c1:20:d8:3c:9b:8f:1b:
+                    7e:03:74:bb:da:69:d3:46:a5:f8:8e:c2:0c:11:90:
+                    51:a5:2f:66:54:40:55:ea:db:1f:4a:56:ee:9f:23:
+                    6e:f4:39:cb:a1:b9:6f:f2:7e:f9:5d:87:26:61:9e:
+                    1c:f8:e2:ec:a6:81:f8:21:c5:24:cc:11:0c:3f:db:
+                    26:72:7a:c7:01:97:07:17:f9:d7:18:2c:30:7d:0e:
+                    7a:1e:62:1e:c6:4b:c0:fd:7d:62:77:d3:44:1e:27:
+                    f6:3f:4b:44:b3:b7:38:d9:39:1f:60:d5:51:92:73:
+                    03:b4:00:69:e3:f3:14:4e:ee:d1:dc:09:cf:77:34:
+                    46:50:b0:f8:11:f2:fe:38:79:f7:07:39:fe:51:92:
+                    97:0b:5b:08:5f:34:86:01:ad:88:97:eb:66:cd:5e:
+                    d1:ff:dc:7d:f2:84:da:ba:77:ad:dc:80:08:c7:a7:
+                    87:d6:55:9f:97:6a:e8:c8:11:64:ba:e7:19:29:3f:
+                    11:b3:78:90:84:20:52:5b:11:ef:78:d0:83:f6:d5:
+                    48:90:d0:30:1c:cf:80:f9:60:fe:79:e4:88:f2:dd:
+                    00:eb:94:45:eb:65:94:69:40:ba:c0:d5:b4:b8:ba:
+                    7d:04:11:a8:eb:31:05:96:94:4e:58:21:8e:9f:d0:
+                    60:fd
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                81:3E:37:D8:92:B0:1F:77:9F:5C:B4:AB:73:AA:E7:F6:34:60:2F:FA
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Authority Key Identifier: 
+                keyid:81:3E:37:D8:92:B0:1F:77:9F:5C:B4:AB:73:AA:E7:F6:34:60:2F:FA
+                DirName:/C=SE/O=AddTrust AB/OU=AddTrust TTP Network/CN=AddTrust Public CA Root
+                serial:01
+
+    Signature Algorithm: sha1WithRSAEncryption
+        03:f7:15:4a:f8:24:da:23:56:16:93:76:dd:36:28:b9:ae:1b:
+        b8:c3:f1:64:ba:20:18:78:95:29:27:57:05:bc:7c:2a:f4:b9:
+        51:55:da:87:02:de:0f:16:17:31:f8:aa:79:2e:09:13:bb:af:
+        b2:20:19:12:e5:93:f9:4b:f9:83:e8:44:d5:b2:41:25:bf:88:
+        75:6f:ff:10:fc:4a:54:d0:5f:f0:fa:ef:36:73:7d:1b:36:45:
+        c6:21:6d:b4:15:b8:4e:cf:9c:5c:a5:3d:5a:00:8e:06:e3:3c:
+        6b:32:7b:f2:9f:f0:b6:fd:df:f0:28:18:48:f0:c6:bc:d0:bf:
+        34:80:96:c2:4a:b1:6d:8e:c7:90:45:de:2f:67:ac:45:04:a3:
+        7a:dc:55:92:c9:47:66:d8:1a:8c:c7:ed:9c:4e:9a:e0:12:bb:
+        b5:6a:4c:84:e1:e1:22:0d:87:00:64:fe:8c:7d:62:39:65:a6:
+        ef:42:b6:80:25:12:61:01:a8:24:13:70:00:11:26:5f:fa:35:
+        50:c5:48:cc:06:47:e8:27:d8:70:8d:5f:64:e6:a1:44:26:5e:
+        22:ec:92:cd:ff:42:9a:44:21:6d:5c:c5:e3:22:1d:5f:47:12:
+        e7:ce:5f:5d:fa:d8:aa:b1:33:2d:d9:76:f2:4e:3a:33:0c:2b:
+        b3:2d:90:06
+
+AddTrust Qualified Certificates Root
+====================================
+MD5 Fingerprint=27:EC:39:47:CD:DA:5A:AF:E2:9A:01:65:21:A9:4C:BB
+PEM data:
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIEHjCCAwagAwIBAgIBATANBgkqhkiG9w0BAQUFADBnMQswCQYDVQQGEwJTRTEU
+MBIGA1UEChMLQWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFkZFRydXN0IFRUUCBOZXR3
+b3JrMSMwIQYDVQQDExpBZGRUcnVzdCBRdWFsaWZpZWQgQ0EgUm9vdDAeFw0wMDA1
+MzAxMDQ0NTBaFw0yMDA1MzAxMDQ0NTBaMGcxCzAJBgNVBAYTAlNFMRQwEgYDVQQK
+EwtBZGRUcnVzdCBBQjEdMBsGA1UECxMUQWRkVHJ1c3QgVFRQIE5ldHdvcmsxIzAh
+BgNVBAMTGkFkZFRydXN0IFF1YWxpZmllZCBDQSBSb290MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA5B6a/twJWoekn0e+EV+vhDTbYjx5eLfpMLXsDBwq
+xBb/4Oxx64r1EW7tTw2R0hIYLUkVAcKkIhPHEWT/IhKauY5cLwjPcWqzZwFZ8V1G
+87B4pfYOQnrjfxvM0PC3KP0q6p6zsLkEqv32x7SxuCqg+1jxGaBvcCV+PmlKfw8i
+2O+tCBGaKZnhqkRFmhJePp1tUvznoD1oL/BLcHwTOK28FSXx1s6rosAx1i+f4P8U
+WfyEk9mHfExUE+uf0S0R+Bg6Ot4l2ffTQO2kBhLEO+GRwVY18BTcZTYJbqukB8c1
+0cIDMzZbdSZtQvESa0NvS3GU+jQd7RNuyoB/mC9suWXY6QIDAQABo4HUMIHRMB0G
+A1UdDgQWBBQ5lYtii1zJ1IC6WA+XPxUIQ8yYpzALBgNVHQ8EBAMCAQYwDwYDVR0T
+AQH/BAUwAwEB/zCBkQYDVR0jBIGJMIGGgBQ5lYtii1zJ1IC6WA+XPxUIQ8yYp6Fr
+pGkwZzELMAkGA1UEBhMCU0UxFDASBgNVBAoTC0FkZFRydXN0IEFCMR0wGwYDVQQL
+ExRBZGRUcnVzdCBUVFAgTmV0d29yazEjMCEGA1UEAxMaQWRkVHJ1c3QgUXVhbGlm
+aWVkIENBIFJvb3SCAQEwDQYJKoZIhvcNAQEFBQADggEBABmrder4i2VhlRO6aQTv
+hsoToMeqT2QbPxj2qC0sVY8FtzDqQmodwCVRLae/DLPt7wh/bDxGGuoYQ992zPlm
+hpwsaPXpF/gxsxjE1kh9I0xowX67ARRvxdlu3rsEQmr49lx95dr6h+sNNVJn0J6X
+dgWTP5XHAeZpVTh/EGGZyeNfpso+gmNIquIISD6q8rKFYqa0p9m9N5xotS1WfbC3
+P6CxB9bpT9zeRXEwMn8bLgn5v1Kh7sKAPgZcLlVAwRv1cEWw3F369nJad9Jjzc9Y
+iQBCYz95OdBEsIJuQRno3eDBiFrRHnGTHyQwdOUeqN48Jzd/g66ed8/wMLH/S5no
+xqE=
+-----END TRUSTED CERTIFICATE-----
+Certificate Ingredients:
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=SE, O=AddTrust AB, OU=AddTrust TTP Network, CN=AddTrust Qualified CA Root
+        Validity
+            Not Before: May 30 10:44:50 2000 GMT
+            Not After : May 30 10:44:50 2020 GMT
+        Subject: C=SE, O=AddTrust AB, OU=AddTrust TTP Network, CN=AddTrust Qualified CA Root
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:e4:1e:9a:fe:dc:09:5a:87:a4:9f:47:be:11:5f:
+                    af:84:34:db:62:3c:79:78:b7:e9:30:b5:ec:0c:1c:
+                    2a:c4:16:ff:e0:ec:71:eb:8a:f5:11:6e:ed:4f:0d:
+                    91:d2:12:18:2d:49:15:01:c2:a4:22:13:c7:11:64:
+                    ff:22:12:9a:b9:8e:5c:2f:08:cf:71:6a:b3:67:01:
+                    59:f1:5d:46:f3:b0:78:a5:f6:0e:42:7a:e3:7f:1b:
+                    cc:d0:f0:b7:28:fd:2a:ea:9e:b3:b0:b9:04:aa:fd:
+                    f6:c7:b4:b1:b8:2a:a0:fb:58:f1:19:a0:6f:70:25:
+                    7e:3e:69:4a:7f:0f:22:d8:ef:ad:08:11:9a:29:99:
+                    e1:aa:44:45:9a:12:5e:3e:9d:6d:52:fc:e7:a0:3d:
+                    68:2f:f0:4b:70:7c:13:38:ad:bc:15:25:f1:d6:ce:
+                    ab:a2:c0:31:d6:2f:9f:e0:ff:14:59:fc:84:93:d9:
+                    87:7c:4c:54:13:eb:9f:d1:2d:11:f8:18:3a:3a:de:
+                    25:d9:f7:d3:40:ed:a4:06:12:c4:3b:e1:91:c1:56:
+                    35:f0:14:dc:65:36:09:6e:ab:a4:07:c7:35:d1:c2:
+                    03:33:36:5b:75:26:6d:42:f1:12:6b:43:6f:4b:71:
+                    94:fa:34:1d:ed:13:6e:ca:80:7f:98:2f:6c:b9:65:
+                    d8:e9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                39:95:8B:62:8B:5C:C9:D4:80:BA:58:0F:97:3F:15:08:43:CC:98:A7
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Authority Key Identifier: 
+                keyid:39:95:8B:62:8B:5C:C9:D4:80:BA:58:0F:97:3F:15:08:43:CC:98:A7
+                DirName:/C=SE/O=AddTrust AB/OU=AddTrust TTP Network/CN=AddTrust Qualified CA Root
+                serial:01
+
+    Signature Algorithm: sha1WithRSAEncryption
+        19:ab:75:ea:f8:8b:65:61:95:13:ba:69:04:ef:86:ca:13:a0:
+        c7:aa:4f:64:1b:3f:18:f6:a8:2d:2c:55:8f:05:b7:30:ea:42:
+        6a:1d:c0:25:51:2d:a7:bf:0c:b3:ed:ef:08:7f:6c:3c:46:1a:
+        ea:18:43:df:76:cc:f9:66:86:9c:2c:68:f5:e9:17:f8:31:b3:
+        18:c4:d6:48:7d:23:4c:68:c1:7e:bb:01:14:6f:c5:d9:6e:de:
+        bb:04:42:6a:f8:f6:5c:7d:e5:da:fa:87:eb:0d:35:52:67:d0:
+        9e:97:76:05:93:3f:95:c7:01:e6:69:55:38:7f:10:61:99:c9:
+        e3:5f:a6:ca:3e:82:63:48:aa:e2:08:48:3e:aa:f2:b2:85:62:
+        a6:b4:a7:d9:bd:37:9c:68:b5:2d:56:7d:b0:b7:3f:a0:b1:07:
+        d6:e9:4f:dc:de:45:71:30:32:7f:1b:2e:09:f9:bf:52:a1:ee:
+        c2:80:3e:06:5c:2e:55:40:c1:1b:f5:70:45:b0:dc:5d:fa:f6:
+        72:5a:77:d2:63:cd:cf:58:89:00:42:63:3f:79:39:d0:44:b0:
+        82:6e:41:19:e8:dd:e0:c1:88:5a:d1:1e:71:93:1f:24:30:74:
+        e5:1e:a8:de:3c:27:37:7f:83:ae:9e:77:cf:f0:30:b1:ff:4b:
+        99:e8:c6:a1
+
+America Online Root Certification Authority 1
+=============================================
+MD5 Fingerprint=14:F1:08:AD:9D:FA:64:E2:89:E7:1C:CF:A8:AD:7D:5E
+PEM data:
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIDpDCCAoygAwIBAgIBATANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEc
+MBoGA1UEChMTQW1lcmljYSBPbmxpbmUgSW5jLjE2MDQGA1UEAxMtQW1lcmljYSBP
+bmxpbmUgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAxMB4XDTAyMDUyODA2
+MDAwMFoXDTM3MTExOTIwNDMwMFowYzELMAkGA1UEBhMCVVMxHDAaBgNVBAoTE0Ft
+ZXJpY2EgT25saW5lIEluYy4xNjA0BgNVBAMTLUFtZXJpY2EgT25saW5lIFJvb3Qg
+Q2VydGlmaWNhdGlvbiBBdXRob3JpdHkgMTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAKgv6KRpBgNHw+kqmP8ZonCaxlCyfqXfaE0bfA+2l2h9LaaLl+lk
+hsmj76CGv2BlnEtUiMJIxUo5vxTjWVXlGbR0yLQFOVwWpeKVBeASrlmLojNoWBym
+1BW32J/X3HGrfpq/m44zDyL9Hy7nBzbvYjnF3cu6JRQj3gzGPTzOggjmZj7aUTsW
+OqMFf6Dch9Wc/HKpoH145LcxVR5lu9RhsCFg7RAycsWSJR74kEoYeEfffjA3PlAb
+2xzTa5qGUwew76wGePiEmf4hjUyAtgyC9mZweRrTT6PP8c9GsEsPPt2IYriMqQko
+O3rHl+Ee5fSfwMCuJKDIodkP1nsmgmkyPacCAwEAAaNjMGEwDwYDVR0TAQH/BAUw
+AwEB/zAdBgNVHQ4EFgQUAK3Zo/Z59m50qX8zPYEX10zPM94wHwYDVR0jBBgwFoAU
+AK3Zo/Z59m50qX8zPYEX10zPM94wDgYDVR0PAQH/BAQDAgGGMA0GCSqGSIb3DQEB
+BQUAA4IBAQB8itEfGDeC4Liwo+1WlchiYZwFos3CYiZhzRAW18y0ZTTQEYqtqKkF
+Zu90821fnZmv9ov761KyBZiibyrFVL0lvV+uyIbqRizBs73B6UlwGBaXCBOMIOAb
+LjpHyx7kADCVW/RFo8AasAFOq73AI25jP4BKxQft3OJvx8Fi8eNy1gTIdGcL+oir
+oQHIb/AUr9KZzVGTfu0uOMe9zkZQPXLjeSWdm4grECDdpbgyn43gKd8hdIaC2y+C
+MMbHNYaz+ZZfRtsMRf3zUMNvxsNIrUam4SdHCh0Om7bCd39j8uB9Gr784N/Xx6ds
+sPmuujz9dLQR6FgNgLzTqIA6me11zEZ7
+-----END TRUSTED CERTIFICATE-----
+Certificate Ingredients:
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+
