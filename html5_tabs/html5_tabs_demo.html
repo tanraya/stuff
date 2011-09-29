@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTML5 tabs</title>
+    <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // Fast and dirty
+            $('article.tabs section > h3').click(function(){
+                $('article.tabs section').removeClass('current');
+                $(this)
+                .closest('section').addClass('current');
+            });
+        });
+    </script>
+    <style type="text/css">
+        .tabs {
+            height: 120px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            display: block;
+        }
+        .tabs section {
+            float: left;
+            z-index: 1;
+        }
+        .tabs section h3 {
+            margin: 0 1px 0 0;
+            background: #d9d9d9;
+            padding: 3px 10px;
+            font: bold 12px Arial;
+            -moz-border-radius: 5px 5px 0 0;
+            cursor: hand;
+            cursor: pointer;
+        }
+
+        .tabs section.current h3 { background: #eee; cursor: default; }
+
+        .tabs section div {
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: #eee;
+            display: none;
+            padding: 0 10px;
+            font: 12px Arial;
+        }
+
+        .tabs section.current div { display: block; }
+    </style>
+
+</head>
+<body>
+    <h1>HTML5 tabs</h1>
+    <p>Each tab has own content-area</p>
+
+    <!-- HTML5 TABS CODE -->
+    <article class="tabs">
+        <section>
+            <h3>Documents</h3>
+
+            <div>
+                <p>A documents tab content1</p>
+                <p>A documents tab content2</p>
+            </div>
+        </section>
+        <section class="current">
+            <h3>Info</h3>
+
+            <div>
+                <p>A info tab content1</p>
+                <p>A info tab content2</p>
+            </div>
+        </section>
+        <section>
+            <h3>Credentials</h3>
+
+            <div>
+                <p>A credentials tab content1</p>
+                <p>A credentials tab content2</p>
+            </div>
+        </section>
+    </article>
+    <!-- /HTML5 TABS CODE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-6539535-1");
+            pageTracker._trackPageview();
+        } catch(err) {}</script>
+    <!--LiveInternet counter--><script type="text/javascript"><!--
+        new Image().src = "http://counter.yadro.ru/hit?r"+
+            escape(document.referrer)+((typeof(screen)=="undefined")?"":
+            ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+            screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+            ";h"+escape(document.title.substring(0,80))+
+            ";"+Math.random();//--></script><!--/LiveInternet-->
+
+
+
+</body>
+</html>
