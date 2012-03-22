@@ -1,0 +1,28 @@
+title: "Фреймворки для nodejs"
+tags:
+- bomber
+- javascript
+- jsan
+- nerve
+- nodejs
+- raccoon
+
+<body>
+<img class="size-full wp-image-388 alignleft" style="margin: 5px;" title="logo" src="http://torqueo.net/wp-content/uploads/2010/01/logo.png" alt="logo" width="200" height="53">
+Я просто оставлю это здесь. Список фреймворков для nodejs, которые я нашёл:
+<ul>
+<li>
+<a rel="noindex,nofollow" href="http://benjaminthomas.org/2009-11-20/designing-a-web-framework.html">Намётки и размышления одного дядюшки Бена</a>, который пытается создать свой фреймворк на nodejs. Смешно, он обозвал Дэвида Хэйнемайера Хэнсона тупицей, это повеселило :) <del datetime="2010-01-10T15:32:05+00:00">Готового кода я там так пока и не нашел.</del> А вот <a rel="noindex,nofollow" href="http://bomber.obtdev.com/">страничка проекта</a>.</li>
+	<li>
+<a rel="noindex,nofollow" href="http://github.com/mshakhan/simplex">Simplex</a> - здесь есть интересные куски кода, стоит посмотреть. Хотя это так - не фреймворк, а просто эксперимент, созданный за пару вечеров.</li>
+	<li>
+<a rel="noindex,nofollow" href="http://github.com/keeto/raccoon/">Raccoon</a> - эта штука уже посерьёзней остальных. Буду её исследовать.</li>
+	<li>Вот еще один фреймворк, <a rel="noindex,nofollow" href="http://github.com/gjritter/nerve">nerve</a>
+</li>
+	<li>В комментариях Kuroki Kaze подсказывает, что есть еще <a rel="noindex,nofollow" href="http://openjsan.org/">JSAN</a>. опенсурсовая библиотека javascript, но честно говоря, не слишком много я полезного там увидел.</li>
+	<li>
+<a rel="noindex,nofollow" href="http://wiki.github.com/ry/node">Список проектов на github</a>, посвященных nodejs</li>
+</ul>
+Если кто знает еще фреймворки для nodejs, буду признателен за ссылки в комментах.
+
+Вообще, мне кажется, серверное программирование на js штука весьма перспективная. Не хватает только мощного фреймворка, по типу Zend или пакетов CPAN, как в Perl, или Gems, как в Ruby. Но это вопрос времени и я думаю, на эту тему стоит написать отдельный пост.</body>

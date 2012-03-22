@@ -1,0 +1,15 @@
+title: "Rails 3.1.beta: Could not find a JavaScript runtime"
+tags:
+- java
+- rails-3
+- runtime
+- therubyracer
+
+<body><p>A tiny note for saving time.
+If you're trying new rails 3.1.beta under Ubuntu you can see this error:
+
+<em>Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes.</em>
+
+The solution is quite simple. Just add gem 'therubyracer' into your Gemfile (it's for Ruby MRI). Done.
+
+<em>Also, you can install another javascript runtimes. But who cares?</em></p></body>

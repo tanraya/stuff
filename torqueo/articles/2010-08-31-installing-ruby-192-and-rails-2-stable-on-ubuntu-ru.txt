@@ -1,0 +1,35 @@
+title: "Установка Ruby 1.9.2 и Rails 3 stable на Ubuntu"
+tags:
+- rails
+- ruby
+- ruby-on-rails
+- ubuntu-1004
+
+<body>
+<p>Давайте установим Ruby 1.9.2 и Rails 3 stable на Ubuntu. Я использовал Ubuntu 10.04, 32-х битную версию. Здесь рассматривается установка Ruby без RVM, так что если будете следовать этому мануалу, то сначала удалите старую версию Ruby и её зависимости.
+
+Если у вас еще не установлены следующие пакеты - установите их:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768827.js?file=gistfile1."></script></div>
+Теперь скачаем исходники Ruby 1.9.2, распакуем их и установим:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768831.js?file=gistfile1."></script></div>
+Добавим путь к бинарным файлам Ruby. 
+<div class="gist-wrapper"><script src="https://gist.github.com/1768833.js?file=gistfile1."></script></div>
+Вам нужно добавить в переменную PATH этот путь - /usr/local/ruby/bin, должно получиться примерно так:
+<pre>PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/ruby/bin"</pre>
+Затем выполним команду source для файла, чтобы применить изменения.
+<div class="gist-wrapper"><script src="https://gist.github.com/1768835.js?file=gistfile1."></script></div>
+Теперь проверим, установился ли Ruby:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768836.js?file=gistfile1."></script></div>
+Вы должны увидеть примерно следующее: ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-linux]
+Теперь создадим символическую ссылку, чтобы программа gem работала
+<div class="gist-wrapper"><script src="https://gist.github.com/1768838.js?file=gistfile1."></script></div>
+Ruby 1.9.2 уже содержит Rubygems, поэтому вам не придется его устанавливать.
+Теперь установим нужные пакеты gem, включая rails 3.:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768839.js?file=gistfile1."></script></div>
+Проверим версию rails:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768840.js?file=gistfile1."></script></div>
+Вы должны увидеть номер версии 3.0.0. Если этого не произошло, по попробуйте выполнить команду <em>source /etc/environment</em>, затем запустите <em>rails -v</em> еще раз.
+Теперь всё готово к созданию нового приложения rails:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768841.js?file=gistfile1."></script></div>
+</body>

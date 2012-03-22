@@ -1,0 +1,30 @@
+title: "Rails: store dates in UTC and display them in local time onto client side"
+tags:
+- html5
+- javascript
+- mootools
+- rails
+- utc
+
+<body>
+<p>In the Rails all timestamps stored in database in UTC by default. UTC is an improved version of wide-known GMT.
+
+Previously, I have kept the timezone for each individual user for computing local date using UTC and user timezone. Well, you know, when you are asked to specify your timezone, choosen it from a huge drop-down list. Some developers, of course, make smarter, they determine the current user's timezone with javascript and then send it to the server via AJAX.
+
+Now I come to the conclusion that in most cases I do not necessarily user's timezone to know (I can't think where it may be necessary to me.) I decided that will be easier to display all the dates on my site in UTC, then on the client side bring them to local time and format using javascript. As a result, I got a helper and a piece of code in javascript.
+
+Here is rails helper, without any frills:
+
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768903.js?file=gistfile1.rb"></script></div>
+
+This helper just display passed date object and display it wrapped by time HTML5 tag.
+
+And here is a javascript code that convert UTC date to local time and format time:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768904.js?file=gistfile1.js"></script></div>
+
+This example is written using mootools framework, but I think similar method like <tt>format</tt> is also available in your favorite framework. If not - it's easy to write this method yourself.
+The script simply looks for all the containers with the class <em>.utc-date</em> and convert contained date to local time with formatting.
+
+In general, this is a simple way to remove yourself from a headache to support multiple time zones in your application. I'm waiting for comments about where method I described does not work.</body>

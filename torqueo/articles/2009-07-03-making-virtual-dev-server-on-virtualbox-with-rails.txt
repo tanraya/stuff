@@ -1,0 +1,68 @@
+title: "Делаем сервер разработчика Rails с использованием виртуализации"
+tags:
+- kubuntu
+- lamp
+- rails
+- ruby
+- virtualbox
+
+<body>
+<p>Всем пламенный привет после небольшого моего отсутствия :)
+
+Сразу с места в карьер: я все свои разработки пишу в основном в windows. Это, конечно имеет как ряд преимуществ (лично для меня), так и ряд неудобств.
+
+Недавно мне пришла в голову идея - почему бы не сделать сервер разработки приложений при помощи виртуальной машины. А что - это удобно. Мы получим нативную среду для приложений и избавимся от многих неудобств.
+
+И тогда я установил Kubuntu в виртуальной машине <a href="http://www.virtualbox.org/">VirtualBox</a> и установил там LAMP и Rails. Сейчас по-порядку расскажу, как все это сделать.
+
+Итак - первое, что нужно сделать - это установить саму виртуальную машину. Я воспользовался VirtualBox, так как она легкая, удобная и к тому же бесплатная. Я не буду рассказывать как установить Kubuntu под VirtualBox - это легко и достаточно материалов по этой теме есть в интернете.
+~
+
+Теперь, когда мы имеем установленную Kubuntu под виртуалкой, нам нужно сделать форвардинг портов из гостевой ОС Kubuntu в хост-ОС Windows, чтобы мы могли из windows соединяться с Kubuntu например по ssh или по http. Делается это так: создаем forwarding.bat файл в директории С:\Program Files\Sun\xVM VirtualBox\ и пишем в него следующие строки (kubuntu - это название вашей виртуальной машины):
+
+Форвардинг апача с 80 на 8888 порт:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768631.js?file=gistfile1."></script></div>
+Форвардинг монгрела с 3000 на 3000 порт:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768633.js?file=gistfile1."></script></div>
+Форвардинг ssh с 22 на 2222 порт:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768634.js?file=gistfile1."></script></div>
+Все. Теперь останавливаем виртуальную машину, если она запущена, затем сохраняем forwarding.bat и запускаем его. После этого снова запускаем виртуальную машину. Кстати, в настройках виртуальной машины соединение по сети должно быть установлено через NAT.
+
+Сейчас нам нужно установить ssh сервер, чтобы мы смоги соединяться в гостевой ос из хост-ос по ssh. В консоли пишем:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768635.js?file=gistfile1.sh"></script></div>
+Ssh будет установлен и запущен. Давайте соединимся с гостевой ОС. Для этого используем клиент Putty:
+
+<img class="size-full wp-image-153 alignnone" title="putty_ssh" src="http://torqueo.net/wp-content/uploads/2009/07/putty_ssh.png" alt="putty_ssh" width="466" height="448">
+
+Отлично - соединились. Если все же не получилось соединиться - попробуйте перезагрузить компьютер.
+
+<img class="size-full wp-image-154" title="ssh_connected" src="http://torqueo.net/wp-content/uploads/2009/07/ssh_connected.png" alt="ssh_connected" width="675" height="424">
+
+Итак, соединение с гостевой ОС Kubuntu по ssh теперь работает. Приступим к установке Ruby и Rails.
+<h3>Установка Ruby и Rails в Kubuntu</h3>
+Установим Ruby:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768636.js?file=gistfile1.sh"></script></div>
+Потом установим дополнительные пакеты gem'ы для Ruby:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768638.js?file=gistfile1.sh"></script></div>
+Далее, установим Mongrel. Он работает быстрее, чем дефолтный веб-сервер WEBrick. И к томуже - у меня так и не получилось сделать форвардинг 3000 порта, когда был WEBrick - я не стал разбираться отчего это происходит - просто установил Mongrel. Итак - устанавливаем:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768639.js?file=gistfile1.sh"></script></div>
+Теперь по команде script/server будет запускаться именно Mongrel. Давайте создадим пустое rails-приложение, чтобы проверить что все работает.
+
+Переходим в домашнюю директорию:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768641.js?file=gistfile1.sh"></script></div>
+И создаем Rails-приложение:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768643.js?file=gistfile1.sh"></script></div>
+Потом запускаем Mongrel
+<div class="gist-wrapper"><script src="https://gist.github.com/1768645.js?file=gistfile1.sh"></script></div>
+Открываем браузер в Kubuntu и набираем <a href="http://localhost:3000/">http://localhost:3000/</a>. Если все работает - то вы увидите дефолтную страничку Rails-приложения. Все, можно работать :).
+
+Но - можно установить еще кое что.
+<h3>Установка LAMP в Kubuntu</h3>
+Давайте установим еще и LAMP - не помешает. Кому помешает - ставьте только Mysql и не читайте дальше :)
+<div class="gist-wrapper"><script src="https://gist.github.com/1768648.js?file=gistfile1.sh"></script></div>
+И PHPMyAdmin - пригодится:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768650.js?file=gistfile1.sh"></script></div>
+После установки о будет находиться по адресу <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a> на гостевой ОС, или по адресу <a href="http://localhost:8888/phpmyadminhttp://">http://localhost:8888/phpmyadmin</a> на хост-ОС.
+<p style="text-align: right;"><em>Спасибо <a href="http://tumalevich.pp.ru/">Константину Тумалевичу</a> за помощь в подготовке статьи</em></p>
+</body>

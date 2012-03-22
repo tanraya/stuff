@@ -1,0 +1,20 @@
+title: "bundle exec - чтобы не забыть"
+tags:
+- bundler
+- compass
+- gem
+- gemfile
+- ruby
+
+<body>
+<p>Очень помогли сегодня в группе ror2ru.
+Я хотел подправить один гем, он у меня лежал на диске, склонированный с гитхаба. Но, чтобы установить этот гем (при установке он генерирует несколько файлов, которые-то и нужно было мне подправить), нужно использовать консольную программу, в моем случае compass, которой указываем название гема, который нужно установить:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768869.js?file=gistfile1.sh"></script></div>
+Но, так как гем у меня в виде склонированной репы, то естественно, программа compass его "не видит". Выход нашелся в следующем.
+
+Сначала подключаем в Gemfile требуемый гем локально:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768870.js?file=gistfile1.rb"></script></div>
+А затем, запускаем нужную команду через bundle exec:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768871.js?file=gistfile1.sh"></script></div>
+Это запустит вашу команду в контексте текущего Gemfile, поэтому, для программы compass гем html5-boilerplate будет прекрасно "виден". Полезная штука.</body>

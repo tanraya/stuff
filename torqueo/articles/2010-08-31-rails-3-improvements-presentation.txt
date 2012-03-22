@@ -1,0 +1,17 @@
+title: "Отличная презентация об улучшениях в коде проекта на Rails 3"
+tags:
+- rails
+- ruby
+- ruby-on-rails
+
+<body>
+<p>Смотрим, как нужно писать код теперь. Мне презентаха очень понравилась!
+
+</p>
+<div style="width:425px" id="__ss_3219240">
+<strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/GreggPollack/rails-3-beautiful-code-3219240" title="Rails 3 Beautiful Code">Rails 3 Beautiful Code</a></strong><object id="__sse3219240" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=beautifulcodeinrails3-greggpollack-100218130149-phpapp02&amp;stripped_title=rails-3-beautiful-code-3219240">
+<param name="allowFullScreen" value="true">
+<param name="allowScriptAccess" value="always">
+<embed name="__sse3219240" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=beautifulcodeinrails3-greggpollack-100218130149-phpapp02&amp;stripped_title=rails-3-beautiful-code-3219240" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object><div style="padding:5px 0 12px">View more <a href="http://www.slideshare.net/">presentations</a> from <a href="http://www.slideshare.net/GreggPollack">GreggPollack</a>.</div>
+</div>
+</body>

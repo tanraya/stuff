@@ -1,0 +1,12 @@
+title: "HTML5 Tabs: a first touch"
+tags:
+- html5
+- tabs
+
+<body><p>HTML5 have a new, very convenient element <em>section</em> which is used to separate content. I tried to implement tabs using this element, because the standard solution on unordered lists (UL) or definition lists (DL) is not semantic, because the tab is not associated with his content area. Finally, one evening I did the first version, "quick and dirty", but I tried.
+
+So, let's see the result: <a href="/files/html5-tabs/"><strong>HTML5 tabs demo</strong></a>
+
+These tabs have some drawbacks (fixed content area height and some others), so I accept suggestions for improvement (professionals will understand what I mean, when they're look the sample code).
+
+<strong>Updated at 24 dec 2009</strong></p></body>

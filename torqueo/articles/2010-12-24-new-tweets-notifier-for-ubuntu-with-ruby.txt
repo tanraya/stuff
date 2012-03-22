@@ -1,0 +1,32 @@
+title: "Уведомлялка о новых твитах для Ubuntu на Ruby"
+tags:
+- ruby
+- twitter
+- ubuntu
+
+<body>
+<p>Мне надоело постоянно лазать в твиттер, чтобы посмотреть, что там новенького пишут. Поэтому, потакая своей лени, я решил автоматизировать это дело :)
+Сразу код:
+
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768861.js?file=gistfile1.rb"></script></div>
+
+Эта штука ползает каждую минуту в мой твиттер и показывает, что там новенького. Есть небольшая недоработка: если с предыдущего захода появятся, например, 2 новых твита, то будет показан только крайний. Если кому не лень это исправить - прошу кинуть код в комменты.
+
+Как это юзать? Для начала нужно установить:
+<ul>
+<li>sudo apt-get install libnotify-bin</li>
+	<li>gem install twitter</li>
+      	<li>Зарегистрировать свое приложение тут <a href="http://twitter.com/apps/new">http://twitter.com/apps/new</a> и вставить в скрипт в конфигурацию полученные ключи и токены</li>
+</ul>
+
+Дальше сохранить предоставленный код в файл и запустить его из консоли:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768862.js?file=gistfile1.sh"></script></div>
+
+Результат выглядит так:
+<img src="http://torqueo.net/wp-content/uploads/2010/12/2iho.jpg" alt="2iho" title="2iho" width="543" height="324" class="alignleft size-full wp-image-608"><strong>UPD 13.01.2011</strong>
+
+<a href="http://twitter.com/Locke23rus">Кирилл Никитин</a> прислал мне исправленный вариант, который я реквестовал выше, за что ему решпект.
+<div class="gist-wrapper"><script src="https://gist.github.com/1768863.js?file=gistfile1.rb"></script></div>
+</body>

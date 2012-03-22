@@ -1,0 +1,93 @@
+title: "Рефакторинг с использованием rails_best_practices"
+tags:
+- rails
+- rails_best_practices
+- refactoring
+- ruby
+
+<body><p>Думаешь, твой рельсовый проект идеален в плане кода? Нет? Хорошо, что можешь это признать. Я вот знал, что в моём маленьком проекте <a href="https://github.com/tanraya/contemplate" rel="nofollow">contemplate</a>, который я мееедленно но верно разрабатываю, были проблемы. В частности - бизнес-логика в контроллере, не DRY-код в некоторых местах и другие проблемы. Теперь я избавился почти от всех них, и помог мне в этом гем <a href="https://github.com/flyerhzm/rails_best_practices" rel="nofollow">rails_best_practices</a>.
+
+Установить и использовать его просто. Добавляешь в Gemfile в группу development строку:
+
+<code><pre class="ruby">gem "rails_best_practices"</pre></code>
+
+И делаешь bundle install. Затем, в корневой директории проекта запускаешь:
+
+<code><pre class="bash">$ rails_best_practices -g</pre></code>
+
+Это сгенерирует конфиг-файл для rails_best_practices. Для начала работы больше настраивать ничего не нужно. Теперь нужно сгенерировать чеклист:
+
+<code><pre class="bash">$ rails_best_practices -f html .</pre></code>
+
+После запуска ты получишь файл rails_best_practices_output.html в корне проекта. Просто открываешь его в браузере и смотришь список. Тебе повезет, если он будет пуст. В моем случае было не так -  я получил 48 ошибок.
+
+Например, у меня был такой экшен:
+
+<code><pre class="ruby">def create
+  anchor = :new_comment
+
+  # Anti-robot protection
+  is_robot = !params[:comment][:name].blank?
+  params[:comment].delete :name
+
+  @comment = Comment.new(params[:comment])
+  @comment.ip = IPAddr.new(request.env["REMOTE_ADDR"]).to_i
+  @comment.user_agent = request.env["HTTP_USER_AGENT"]
+  @comment.commentable = @post
+
+  if !is_robot
+    if @comment.save
+      flash[:notice] = 'Ваш комментарий опубликован.'
+      flash.now[:comment] = nil
+      anchor = view_context.dom_id(@comment)
+    else
+      flash[:comment] = @comment
+    end
+  else
+    flash[:comment] = nil
+  end
+
+  redirect_to polymorphic_path(@post, :anchor =&gt; anchor)
+end</pre></code>
+
+После того, как я последовал рекомендациям <em>rails_best_practices</em>, у меня получился более чистый код, так как я вынес имевшуюся бизнес-логику из контроллера в модель:
+
+<code><pre class="ruby">def create
+  anchor = :new_comment
+
+  # Anti-robot protection
+  is_robot = !params[:comment][:name].blank?
+  params[:comment].delete :name
+
+  @comment = @commentable.comments.build(params[:comment])
+
+  if !is_robot
+    if @comment.publish(request.env)
+      flash[:notice] = 'Ваш комментарий опубликован.'
+      flash.now[:comment] = nil
+      anchor = view_context.dom_id(@comment)
+    else
+      flash[:comment] = @comment
+    end
+  else
+    flash[:comment] = nil
+  end
+
+  redirect_to polymorphic_path(@commentable, :anchor =&gt; anchor)
+end</pre></code>
+
+Вот как выглядит метод <em>Comment#publish</em>
+
+<code><pre class="ruby">def publish(env)
+  raise 'Cannot find associated object for this comment!' if self.commentable.nil?
+  require 'ipaddr'
+
+  self.ip = IPAddr.new(env["REMOTE_ADDR"]).to_i
+  self.user_agent = env["HTTP_USER_AGENT"]
+
+  save
+end</pre></code>
+
+Очень полезный гем. Я неплохо улучшил свой код при помощи его рекомендаций. Гем rails_best_practices также позволяет <a href="https://github.com/flyerhzm/rails_best_practices/wiki/How-to-write-your-own-check-list" rel="nofollow">добавлять свои проверки в чеклист</a>, что позволит проще проводить рефакторинг большого проекта, если вы напишите специфичные для него проверки.
+
+В общем, отличная вещь, рекомендую всем, кто еще не пробовал.</p></body>

@@ -1,0 +1,20 @@
+title: "Загрузка view по-требованию в Zend Framework"
+tags:
+- zend-framework
+- zf-action-helper
+- zf-view
+
+<body>
+<p>Поведение ZF по-умолчанию мне не очень нравится - он всегда загружает шаблон вида. То есть для каждого действия в контроллере обязательно должен быть шаблон вида.
+
+Но шаблон часто не требуется - например, когда отдаете данные из действия в JSON, или не отдаете вообще ничего. В этом случае вам приходится отключать рендеринг вида при помощи
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768653.js?file=gistfile1.php"></script></div>
+Но так делать не удобно, если у вас много действий, где шаблон вида не нужен. Давайте пойдём по пути Rails :). Мы сделаем так, чтобы шаблон вида загружался только в том случае, если он существует. Для этого напишем помощник действия (action helper):
+~
+<div class="gist-wrapper"><script src="https://gist.github.com/1768655.js?file=gistfile1.php"></script></div>
+Класс помощника готов. Теперь нужно зарегистрировать наш класс в брокере помощников (делайте это в вашем Bootstrap файле):
+<div class="gist-wrapper"><script src="https://gist.github.com/1768656.js?file=gistfile1.php"></script></div>
+Таким образом, мы сделали Action helper, который срабатывает до запуска viewRenderer'а, но после диспетчеризации действия и сообщает viewRenderer'у, нужно ли рендерить шаблон вида или нет.
+<p style="text-align: right;">Спасибо <strong>lcf</strong> &lt;<a href="http://lcf.name">http://lcf.name</a>&gt; за любезно предоставленный код :)</p>
+</body>

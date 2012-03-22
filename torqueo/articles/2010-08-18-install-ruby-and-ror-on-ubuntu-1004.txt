@@ -1,0 +1,47 @@
+title: "Установка Ruby и RoR на Ubuntu 10.04"
+tags:
+- rails
+- ruby
+- ruby-on-rails
+- ubuntu-1004
+
+<body>
+<p>Если вы используете Ubuntu 10.04 или 9.10, то следующие шаги по установке будут одинаковы для той и другой версии ОС. Чтобы установить Ruby on Rails, сначала вам нужно установить некоторые примочки, а так же сам Ruby.
+
+Можно установить Ruby из репозитория, либо из исходного кода. Чтобы установить Ruby из репозитория, наберите в терминале следующую строку:
+  
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768813.js?file=gistfile1."></script></div>
+
+Если же вы хотите установить из исходников, то сначала нужно установить следующие пакеты:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768816.js?file=gistfile1."></script></div>
+
+Теперь вам нужно скачать архив с исходными кодами Ruby:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768817.js?file=gistfile1."></script></div>
+
+Разархивируем файлы:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768820.js?file=gistfile1."></script></div>
+
+Компилируем и устанавливаем Ruby:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768821.js?file=gistfile1."></script></div>
+
+Теперь запустите в консоли команду irb, и если вы не увидите никаких ошибок - поздравляю, Ruby установился успешно.
+
+Перед тем, как установить Rails, вам нужно установить некоторые пакеты gem. Gem-пакеты - это упакованные приложения или библиотеки Ruby. Вы можете использовать команду gem чтобы установить различные бесплатные библиотеки, включая и Rails. Подробнее о rubygems <a href="http://docs.rubygems.org/read/book/1">можно почитать в мануале</a>.
+
+Устанавливаем rubygems следующей командой:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768822.js?file=gistfile1."></script></div>
+
+Теперь при помощи команды gem устанавливаем Rails:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768824.js?file=gistfile1."></script></div>
+
+Эта команда установит последнюю версию Rails, но если вы хотите установить одну из предыдущих версий, например 2.2.2, то воспользуйтесь следующей командой:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768825.js?file=gistfile1."></script></div>
+</body>

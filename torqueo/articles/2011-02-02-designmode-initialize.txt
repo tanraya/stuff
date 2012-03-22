@@ -1,0 +1,12 @@
+title: "DesignMode: инициализация"
+tags:
+- designmode
+- wysiwym
+
+<body><p>В <a href="http://torqueo.net/how-sholud-look-the-perfect-wysiwyg/">предыдущем посте</a> я озвучил свои мысли по поводу того, как должен, на мой взгляд, выглядеть идеальный визуальный редактор текста.
+
+Я начал работу над своим редактором и хочу представить первые наработки. Проект называется DesignMode. Это - <a href="http://en.wikipedia.org/wiki/WYSIWYM">WYSIWYM</a> редактор для редактирования текста с веб-страницы. Я выложил проект на Github: <a href="https://github.com/RubberRails/design_mode">design_mode</a>. Скоро, скорее всего, сяду писать Roadmap проекта.
+
+<a href="https://github.com/RubberRails/design_mode">Код проекта на Github</a>
+
+Форки приветствуются :)</p></body>

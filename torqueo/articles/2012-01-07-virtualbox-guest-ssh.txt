@@ -1,0 +1,29 @@
+title: "Virtualbox guest ssh"
+tags:
+- port-forwarding
+- ssh
+- ubuntu
+- virtualbox
+
+<body>
+<p>Всё время забываю, как делать port-forwarding в Virtualbox для Ubuntu-host в Ubuntu-guest.
+
+Итак. Для начала в настройках сети виртуальной машины устанавливаем Network Adapter как NAT. Делаем это при выключенной виртуальной машине.
+
+Дальше смотрим виртуалки, которые есть:
+
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768905.js?file=gistfile1."></script></div>
+
+И делаем, собственно, port forwarding:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768906.js?file=gistfile1."></script></div>
+
+Ubuntu 11.10 - это имя виртуальной машины, для которой пробрасываем порты.
+
+Всё. Дальше, запускаем виртуальную машину и соединяемся с ней:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768908.js?file=gistfile1."></script></div>
+
+Готово.
+</body>

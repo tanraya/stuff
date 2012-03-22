@@ -1,0 +1,79 @@
+title: "В конце марта 2010 г. в Санкт-Петербурге пройдет первая в России конференция по Zend Framework (Регаемся, ребяты!)"
+
+<body>
+<p>На днях закончился прием тезисов по планируемым докладам. Примечательно, что в состав докладчиков вошли ведущие участники русскоязычного сообщества ZF, опытнейшие специалисты и лично один из создателей фрэймворка!
+
+</p>
+<p>
+На данный момент уже открыта <a rel="nofollow,noindex" href="http://www.zfconf.ru/pre-registration.php" target="_blank"><strong>предварительная регистрация</strong></a> на конференцию! Для решения ряда вопросов организаторам <strong>очень важно</strong> сейчас понять приблизительное количество человек, которые смогут посетить конференцию или каким-то иным образом принять участие в ней.
+
+</p>
+<p>
+
+Каждый предстоящий доклад возможно обсудить на форуме ZF-сообщества. Ваше мнение очень важно для авторов!
+
+</p>
+<p>
+<strong>Планируемые доклады</strong>
+
+</p>
+<p>
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2269.0" target="_blank">Жизненный цикл предложений (proposals) в проекте Zend Framework</a></strong> 
+
+Александр Веремьев (<a rel="nofollow,noindex" target="_blank" href="http://www.zend.com">Zend Technologies</a>, Zend Framework Core команда) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2270.0" target="_blank">Zend_Search_Lucene в деталях</a></strong> 
+
+Александр Веремьев (<a rel="nofollow,noindex" target="_blank" href="http://www.zend.com">Zend Technologies</a>, Zend Framework Core команда) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2271.0" target="_blank">Zend Framework и производительность</a></strong> 
+
+Александр Махомет (создатель сообщества <a rel="nofollow,noindex" target="_blank" href="http://zendframework.ru">ZendFramework.ru</a>) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2272.0" target="_blank">Zend Framework и MVC, «толстая» модель</a></strong> 
+
+
+Александр Стешенко (<a rel="nofollow,noindex" target="_blank" href="http://norada.com">Norada Corporation</a>, PHP-разработчик) 
+
+<strong> 
+<a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2273.0" target="_blank">ФотоСтрана.ru: Прототипирование с использованием ZF (история боевого применения Zend Framework в highload-проекте)</a></strong> 
+
+Леонид Жаворонков (<a rel="nofollow,noindex" target="_blank" href="http://fotostrana.ru">ФотоСтрана.ru</a>, тимлид) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2274.0" target="_blank">Использование очередей сообщений в повседневных проектах</a></strong> 
+
+Денис Баклыков (<a rel="nofollow,noindex" href="http://obnovlenie.ru" target="_blank">Обновление</a>, веб-разработчик) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2275.0" target="_blank">Zend Framework и Doctrine</a></strong> 
+
+Степан Танасийчук (руководитель веб-студии <a rel="nofollow,noindex" target="_blank" href="http://stfalcon.com">stfalcon.com</a>) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2276.0" target="_blank">Zend Framework и мультиязычность</a></strong> 
+
+Степан Танасийчук (руководитель веб-студии <a rel="nofollow,noindex" target="_blank" href="http://stfalcon.com">stfalcon.com</a>) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2277.0" target="_blank">История проекта e-Штаб</a></strong> 
+
+Анатолий Ларин (<a rel="nofollow,noindex" target="_blank" href="http://www.e-legion.com">e-Легион</a>, веб-программист) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2278.0" target="_blank">Что нового несет нам Zend Framework 2.0?</a></strong> 
+
+Надежда Блинова (<a rel="nofollow,noindex" target="_blank" href="http://www.wizartech.ru">Wizartech</a>, веб-программист), Георгий Туревич (<a href="http://www.wizartech.ru" target="_blank">Wizartech</a>, ведущий веб-программист) 
+
+<strong><a rel="nofollow,noindex" href="http://zendframework.ru/forum/index.php?topic=2279.0" target="_blank">Интеграция Zend Framework c Javascript-фрэймворками jQuery и Dojo Toolkit</a></strong> 
+
+Георгий Туревич (<a rel="nofollow,noindex" href="http://www.wizartech.ru" target="_blank">Wizartech</a>, ведущий веб-программист)
+
+</p>
+<p>
+Смело обсуждайте доклады и <a rel="nofollow,noindex" href="http://www.zfconf.ru/pre-registration.php" target="_blank"><strong>регистрируйтесь</strong></a>!
+
+</p>
+<p>
+За последними новостями можно следить здесь:<br><strong>RSS-канал:</strong> <a rel="nofollow,noindex" href="http://feeds.feedburner.com/zfconf" target="_blank">feeds.feedburner.com/zfconf</a><br><strong>Twitter:</strong> <a rel="nofollow,noindex" href="http://twitter.com/zfconf" target="_blank">@zfconf</a><br><strong>Группа Вконтакте:</strong> <a rel="nofollow,noindex" href="http://vkontakte.ru/club14951507" target="_blank">vkontakte.ru/club14951507</a>
+
+</p>
+<p>
+К участию также приглашаются информационные и финансовые спонсоры.
+</p>
+</body>

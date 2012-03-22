@@ -1,0 +1,20 @@
+title: "Микрофреймворк fab для nodejs"
+tags:
+- fab
+- javascript
+- nodejs
+- rails
+- sinatra
+
+<body>
+<p>Наткнулся на замечательный <a href="http://github.com/jed/fab">микрофреймворк fab</a>, который позволяет легко создавать простые серверные приложения на языке <em>javascript</em>, для веб-сервера nodejs.
+
+Fab очень похож на ruby-фреймворк <a href="http://github.com/sinatra/sinatra">Sinatra</a>, который является довольно популярной штукой в среде ruby-девелоперов, так как позволяет сделать легкое приложение, без использования тяжеловесов, таких, как Rails.
+
+Например, так выглядит простейшее приложение в Sinatra:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768789.js?file=gistfile1.rb"></script></div>
+А вот так выглядит точно такое же приложение в fab:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768790.js?file=gistfile1.js"></script></div>
+
+Многословнее, но всё равно круто, да? Единственное там пока нету разделения запросов по <em>REQUEST_METHOD</em>, первой нужнейшей штуки для удобной реализации REST-сервиса.</body>

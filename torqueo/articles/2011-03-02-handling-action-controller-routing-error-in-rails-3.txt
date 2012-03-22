@@ -1,0 +1,30 @@
+title: "Обработка ActionController::RoutingError в Rails 3"
+tags:
+- jose-valim
+- middleware
+- rails
+- rails-3
+- rescue_from
+- routingerror
+- ruby
+- ruby-on-rails
+
+<body>
+<p>Раньше, до третьих рельс, исключение маршрутизатора можно было красиво и спокойно перехватить, чтобы показать страницу с ошибкой 404. Достаточно было поместить в ApplicationController следующее:
+
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768874.js?file=gistfile1.rb"></script></div>
+
+Ну, и определить метод error_not_found, который бы рендерил страницу с 404 ошибкой. Но в Rails 3 произошло изменение - стал использоваться гем <a href="https://github.com/josh/rack-mount/">rack-mount</a>, который используется в Rails как <em>middleware</em>, то есть как прослойка между вашим приложением и веб-сервером. И исключение <em>RoutingError</em> переехало именно в middleware, так что теперь его <b>не получится отловить в контроллере</b>, так как это исключение отлавливается и рендерится еще до вызова контроллера.
+
+Разработчик Rails, а именно Хосе Валим, назначил этой проблеме статус low и поместил <a href="https://rails.lighthouseapp.com/projects/8994/tickets/4444-can-no-longer-rescue_from-actioncontrollerroutingerror">тикет</a> в milestone 3.1, что означает, что решение разработчики родят только в версии Rails 3.1. На момент написания этой статьи текущая версия - 3.0.5, так что ждать еще достаточно долго. Сейчас разработчики думают над тем, как сделать обработку ошибок маршрутизации по-нормальному. Но Хосе предложил временное решение - использовать <em>globbing</em> в маршрутах. Нужно просто в вашем <em>routes.rb</em> в самом конце прописать это:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768875.js?file=gistfile1.rb"></script></div>
+
+И добавить метод <em>home#routing_error</em> по вашему вкусу. Мой таков:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768876.js?file=gistfile1.rb"></script></div>
+
+Остальные эксепшены, вроде <em>ActionController::UnknownController</em> перехватываются нормально при помощи <em>rescue_from</em> и их можно преспокойно обрабатывать в <em>ApplicationController</em>, например.
+
+Да, еще есть вот такое решение. С использованием гема <a href="https://github.com/vidibus/vidibus-routing_error">vidibus-routing_error</a> можно работать с исключением RoutingError как прежде, через rescue_from.</body>

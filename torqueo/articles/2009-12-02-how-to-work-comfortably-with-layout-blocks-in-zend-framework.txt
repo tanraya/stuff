@@ -1,0 +1,44 @@
+title: "How to work comfortably with layout blocks in Zend Framework"
+tags:
+- action-controller-helper
+- blocks
+- zend-framework
+- zf
+- zf-front-controller-plugin
+- zf-layout
+
+<body>
+<p>During my research, I found a convenient way to work with html blocks on the site. Almost every site has a number of blocks that should be present on some pages and absent on others. So, you need a flexible tool for managing the blocks.
+
+I will present my vision of how to manage the blocks under Zend Framework.
+
+~
+
+Here is the idea.
+All available blocks are listed in blocks.ini config. This allows easily to see all the blocks in one place.
+
+I'll show how looks blocks.ini config. For example, we have config with two defined blocks, the toolbar block and the banner block:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768778.js?file=gistfile1.ini"></script></div>
+
+As we can see, each block have specified module, controller and action. We can see where the block will get its data.
+All we need to work with blocks is a <em>action controller helper</em>, <em>front controller plugin</em> and <em>blocks.ini</em> config.
+
+With the <em>action helper</em> we specify blocks that will be loaded into layout or unloaded from layout. <em>Front controller plugin</em> directly controls the blocks loading, which occurs immediately after the dispatch of the controller.
+
+So, let's see to action helper code:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768780.js?file=gistfile1.php"></script></div>
+Then let's look at the front controller plugin, which controls the blocks loading into layout.
+<div class="gist-wrapper"><script src="https://gist.github.com/1768783.js?file=gistfile1.php"></script></div>
+As a result, in any controller of our application, we can work with blocks like this:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768785.js?file=gistfile1.php"></script></div>
+We can output any block in layout by block name:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768787.js?file=gistfile1.php"></script></div>
+By comments in the code should be clear how to work with blocks. You can even add to the action helper <em>addAll()</em> method to be able to load all the blocks at once, in a contrast to the <em>removeAll()</em> method - but it's on your taste.
+
+    <p>
+        <script type="text/javascript">
+        digg_url = 'http://torqueo.net/how-to-work-comfortably-with-layout-blocks-in-zend-framework/';
+        digg_title = 'How to work comfortably with layout blocks in Zend Framework';
+        </script><script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script></p>
+</body>

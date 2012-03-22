@@ -1,0 +1,40 @@
+title: "Подробнее о хранении товаров с различными свойствами в БД"
+tags:
+- activerecord
+- rails
+- rails-3
+- ruby-on-rails
+- tableless
+
+<body>
+<p>В прошлой статье меня попросили подробнее рассказать, как устроено хранение товаров с различными свойствами в проекте, о котором я упомянул.
+
+Первый класс - это класс, который обеспечивает бестабличную ActiveRecord модель, если от него отнаследоваться. Он лежит в <em>app/lib/tableless.rb</em>
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768880.js?file=gistfile1.rb"></script></div>
+
+Этот код лежит в <em>app/models/product_kinds/base.rb</em>. Код обеспечивает поддержку групп свойств и свойств для моделей товаров (:group, :prop), а так же содержит базовую модель <em>Base</em> с двумя общими для всех типов товаров свойствами :name и :price.
+
+Все остальные классы типов товаров должны наследоваться именно от <em>Base</em>. Смотрим код:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768881.js?file=gistfile1.rb"></script></div>
+
+Так мы описываем тип товара "Автомобиль". Этот код лежит в <em>app/models/product_kinds/automobile.rb</em>
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768882.js?file=gistfile1.rb"></script></div>
+
+Вот модель, описывающая тип товара. В БД у нас есть табличка со всеми существующими типами товаров. Этот код лежит в <em>app/models/product_kind.rb</em>
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768883.js?file=gistfile1.rb"></script></div>
+
+А это - непосредственно модель, описывающая сам товар. У товара есть свойство :props, в котором в сериализованном виде хранится объект со свойствами товара, например, тот же <em>Automobile</em>. Мы видим геттер и сеттер для props, которые сериализуют и десериализую объект и, соответственно, строку:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768885.js?file=gistfile1.rb"></script></div>
+
+Используется в контроллере это примерно так (создание нового товара):
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768886.js?file=gistfile1.rb"></script></div>
+
+<em>P.S.: Знаю, что некоторые куски кода далеко не оптимальны и можно написать лучше и проще. Все в ваших руках - этот код только для примера, как можно сделать :)</em>
+
+Надеюсь, я сумел разъяснить некоторые детали, которые читатели сего блога хотели знать.</body>
