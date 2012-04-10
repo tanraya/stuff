@@ -1,0 +1,19 @@
+<h1>Listing albums</h1>
+
+<table>
+<% @albums.each do |album| %>
+  <tr>
+    <td>
+      <h2><%= album.title %></h2>
+      <%= image_tag album.cover.image.image.thumb("120x120#").url %>
+    </td>
+    <td><%= link_to 'Show', album %></td>
+    <td><%= link_to 'Edit', edit_album_path(album) %></td>
+    <td><%= link_to 'Destroy', album, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Album', new_album_path %>

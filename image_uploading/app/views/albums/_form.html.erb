@@ -1,0 +1,30 @@
+<%= simple_form_for @album, :id => :album do |f| %>
+  <%= f.input :title, :wrapper_html => { :id => :title_wrapper } %>
+
+  <ul class="photos">
+    <%= f.simple_fields_for :photos do |photo| %>
+      <%= photo.simple_fields_for :image do |image| %>
+        <li class="<%= image.object.present? && image.object.persisted? ? 'has-image' : '' %>">
+          <% if image.object.present? && image.object.persisted? %>
+            <figure>
+              <%= link_to image_tag(image.object.image.thumb( defined?(size) ? size : "120x120#" ).url), root_path, :title => 'Показать в большем размере' %>
+            </figure>
+          <% end %>
+
+          <%= photo.input :title %>
+          <%= image.input :image, :as => :file, :required => false %>
+
+          <% unless image.object.new_record? %>
+            <%= image.input :_destroy, :as => :boolean %>
+          <% end %>
+        </li>
+      <% end %>
+     <% end %>
+  </ul>
+
+  <%= f.button :submit %>
+<% end %>
+
+
+
+

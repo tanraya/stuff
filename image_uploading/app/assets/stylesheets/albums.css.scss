@@ -1,0 +1,84 @@
+form {
+  div#title_wrapper {
+    padding: 15px;
+    background: #ddd;
+  }
+
+  ul.photos {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin: 0 20px 0 144px;
+      min-height: 130px + 7px * 2;
+
+      figure {
+      margin: 0;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        left: -144px;
+        top: 0;
+
+        a {
+          outline: none;
+          padding: 7px;
+          background: #eee;
+          border: 1px solid #ddd;
+          border-top: 1px solid #fefefe;
+          border-left: 1px solid #fefefe;
+          display: block;
+          width: 120px;
+          height: 120px;
+
+          &:hover, &:focus {
+            background: lightgoldenrodyellow;
+          }
+          
+          img { display: block; }  
+        }
+      }
+    }
+  }
+}
+
+
+#file_browse_wrapper {
+
+width: 93px;
+
+height: 28px;
+
+background: url('file_browse_normal.png') 0 0 no-repeat;
+
+border:none;
+
+overflow:hidden;
+
+}
+
+#file_browse_wrapper:hover {
+
+background: url('file_browse_hover.png') 0 0 no-repeat;
+
+}
+
+#file_browse_wrapper:active {
+
+background: url('file_browse_pressed.png') 0 0 no-repeat;
+
+}
+
+#file_browse{
+
+margin-left:-145px;
+
+opacity:0;
+
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+
+}
