@@ -1,0 +1,55 @@
+title: "Делаем красивые кнопки с использованием лучших практик"
+tags:
+- css-buttons
+- photoshop
+- png
+- pretty-buttons
+- web20-buttons
+
+<body>
+<p>В этом примере я расскажу, как сделать красивые кнопки для использования их на ваших веб-страницах использованием лучших практик. Эти кнопки будут:
+</p>
+<ul>
+<li>Использовать всего лишь одну картинку для всех состояний</li>
+	<li>Поддерживать 3 состояния: состояние покоя, при наведении мыши, при нажатии.</li>
+	<li>Иметь малое количество CSS-кода</li>
+	<li>Легко встраиваться в любые места ваших веб-страниц</li>
+	<li>Текст на кнопке это именно текст, а не картинка.</li>
+	<li>Кнопки могут иметь произвольную ширину.</li>
+</ul>
+В итоге, мы получим такие кнопки:
+<p style="text-align: center;"><a href="http://torqueo.net/developing-pretty-buttons-with-best-practices/#more-292"><img class="aligncenter size-full wp-image-299" src="http://torqueo.net/wp-content/uploads/2009/11/preview.jpg" alt="preview" width="598" height="95"></a></p>
+
+
+~
+<h3>Приступим</h3>
+Для начала нам нужно нарисовать эти самые кнопки. Откроем Photoshop и создадим новый документ:
+<p style="text-align: center;"><img class="size-full wp-image-293 aligncenter" title="step1" src="http://torqueo.net/wp-content/uploads/2009/11/step1.jpg" alt="step1" width="551" height="338"></p>
+
+Затем, при помощи инструмента Rectangular Marquee Tool выделим на странице фиксированную область, как показано на рисунке:
+
+<img class="aligncenter size-full wp-image-294" title="step2" src="http://torqueo.net/wp-content/uploads/2009/11/step2.jpg" alt="step2" width="644" height="206">
+
+После выделения получим вот такой вид:
+
+<img class="aligncenter size-full wp-image-295" title="step3" src="http://torqueo.net/wp-content/uploads/2009/11/step3.jpg" alt="step3" width="499" height="114">
+
+Затем, создадим новый слой и зальём его чёрным цветом. Дальше, нам остаётся только потюнить Blending Options слоя и настроить его правильным образом. Я специально дал пример только начала создания кнопок, потому что дальше всё донельзя банально. Вы можете <a href="/files/pretty-buttons/buttons.psd">скачать готовый psd-файл</a>, чтобы посмотреть, какие настройки я применил к кнопкам.
+<h3>Осталось дело за малым</h3>
+Теперь, когда кнопки нарисованы, нам остаётся только  создать png-файл с кнопками, а так же html-разметку и css-код. Опять же, я не буду пошагово все разъяснять, так как комментариев в файле с примером должно хватить в избытке. Давайте лучше насладимся результатом:
+
+[caption id="attachment_297" align="aligncenter" width="598" caption="Нажмите, чтобы посмотреть онлайн-демо"]<a title="Посмотреть онлайн-демо" href="/files/pretty-buttons/buttons.html"><img class="size-full wp-image-297" title="Посмотреть онлайн-демо" src="http://torqueo.net/wp-content/uploads/2009/11/result.jpg" alt="result" width="598" height="191"></a>[/caption]
+
+<strong>Важно!</strong> В моём примере используются кнопки с полупрозрачной тенью и закругленными уголками. Естественно, в формате png. Как известно,  IE6 не поддерживает альфа-канал в png, поэтому, приходится использовать костыль. В моём примере такого костыля нет. Но если вам нужна поддержка альфа-канала в IE6, то я горячо рекомендую использовать <a rel="noindex,nofollow" href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD BelatedPNG</a>, это наилучшее решение на сегодняшний день.
+
+Итак, как видим, мы получили довольно неплохие кнопки :) Надеюсь, вам понравилась эта статья.
+
+Дальше можно:
+<ul>
+<li><a href="/files/pretty-buttons/buttons.html">Посмотреть онлайн-демо</a></li>
+	<li><a href="/files/pretty-buttons/buttons.psd">Скачать исходник psd</a></li>
+	<li><a href="/files/pretty-buttons/buttons.zip">Скачать демо в zip-файле</a></li>
+	<li><a rel="noindex,nofollow" href="http://www.designvitality.com/blog/2007/10/photoshop-button-tutorials/">Почитать, как можно рисовать кнопки в photoshop</a></li>
+	<li><a rel="noindex,nofollow" href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">Поддержка альфа-канала в png в IE6</a></li>
+</ul>
+</body>

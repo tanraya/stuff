@@ -1,0 +1,29 @@
+title: "Установка MongoDB для Ubuntu 10.04 из пакета"
+tags:
+- mongodb
+- ubuntu-1004
+
+<body>
+<p>MongoDB можно собрать вручную, а можно и установить из пакета. Я предпочитаю последнее, так как это гораздо проще и занимает меньше времени. К тому же, нам не нужно добавлять init.d скрипты - все добавится само.
+
+Сначала добавим репозиторий в sources.list. Откроем файл:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768801.js?file=gistfile1."></script></div>
+и добавим в конец файла строку:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768802.js?file=gistfile1."></script></div>
+Затем, добавим ключ при помощи следующей команды:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768804.js?file=gistfile1."></script></div>
+
+И обновим кэш:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768805.js?file=gistfile1."></script></div>
+Всё. Теперь тупо ставим mongoDB из пакета:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768807.js?file=gistfile1."></script></div>
+После установки, проверим, все ли установилось. Для этого в консоли можно запустить mongo-shell:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768808.js?file=gistfile1."></script></div>
+Дальше можно поменять <em>dbpath</em> в конфиге и указать место, где у вас хранится база данных. Не забудьте сделать эту папку доступной для записи юзеру mongodb.
+<div class="gist-wrapper"><script src="https://gist.github.com/1768810.js?file=gistfile1."></script></div>
+После редактирования конфига перезапустим mongod:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768812.js?file=gistfile1."></script></div>
+Вот вроде бы и все. Дополнительную информацию смотрите здесь: <a href="http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages">http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages</a>
+</body>

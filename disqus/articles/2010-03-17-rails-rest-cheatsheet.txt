@@ -1,0 +1,8 @@
+title: "Шпаргалка по REST в Rails"
+tags:
+- rails
+- rest
+
+<body><p>Вот, выкладываю чисто для себя :)
+
+<a href="/files/rest-cheatsheet/rest-cheatsheet.pdf">Шпаргалка по REST в Rails (pdf)</a></p></body>

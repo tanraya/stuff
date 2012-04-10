@@ -1,0 +1,18 @@
+title: "Встроенные переводы сообщений валидаторов в Zend Framework"
+tags:
+- tomas-weidner
+- zend-framework
+- zend_locale
+- zend_translate
+
+<body>
+<p>В новом Zend Framework 1.10 появились переводы для встроенных валидаторов! Ура!
+Теперь не нужно переводить самому, как, например, делал я когда-то. Теперь можно тупо:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768792.js?file=gistfile1.php"></script></div>
+
+И всё - радуемся.
+
+Информация из <a rel="noindex,nofollow" href="http://www.thomasweidner.com/flatpress/2010/01/17/translating-validation-messages/">оригинального поста</a> Томаса Вейднера, разработчика i18n в ZF.
+
+<strong>UPD:</strong> мы с ребятами с zendframework.ru (спасибо им) <a href="http://zendframework.ru/forum/index.php?topic=2340">перевели сообщения валидаторов</a> на русский язык. Ожидается, что наш перевод появится в ZF 1.10.2 (выйдет 23 февраля 2010). Так же, ожидается перевод на украинский язык.</body>

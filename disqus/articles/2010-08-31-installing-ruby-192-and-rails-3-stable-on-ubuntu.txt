@@ -1,0 +1,40 @@
+title: "Installing Ruby 1.9.2 and Rails 3 stable on Ubuntu"
+tags:
+- rails
+- ruby
+- ruby-on-rails
+- ubuntu-1004
+
+<body>
+<p>Let's install Ruby 1.9.2 and Rails 3 stable on Ubuntu. I'm going to use just one Ruby version so, <strong>this installation without RVM</strong> (<a href="http://rvm.beginrescueend.com/">Ruby Version Manager</a>). I'm using Ubuntu 10.04, 32 bit version.
+
+If you have not yet installed the following packages - install them:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768842.js?file=gistfile1."></script></div>
+Now download Ruby 1.9.2 sources, unpack them and install:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768843.js?file=gistfile1."></script></div>
+Add path to binary Ruby files.
+<div class="gist-wrapper"><script src="https://gist.github.com/1768844.js?file=gistfile1."></script></div>
+You need to add in the PATH variable that path - /usr/local/ruby/bin, should look something like this:
+<pre>PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/ruby/bin"</pre>
+Then run the <em>source</em> command for the file /etc/environment to apply changes.
+<div class="gist-wrapper"><script src="https://gist.github.com/1768845.js?file=gistfile1."></script></div>
+Now check is Ruby installed properly:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768847.js?file=gistfile1."></script></div>
+You should see something like this: ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-linux]
+Now create a symbolic link for ruby and gem program
+<div class="gist-wrapper"><script src="https://gist.github.com/1768848.js?file=gistfile1."></script></div>
+Ruby 1.9.2 is already includes Rubygems, so you do not have to install it.
+Now install the required gem packages, including Rails 3.:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768850.js?file=gistfile1."></script></div>
+Check Rails version:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768852.js?file=gistfile1."></script></div>
+You should see the version number 3.0.0. Otherwise, try to execute command <em>source /etc/environment</em> and enter <em>rails -v</em> command once again.
+Now you are ready to create a new Rails 3 application:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768853.js?file=gistfile1."></script></div>
+
+<strong>UP:</strong> To update rails to latest version (3.0.3 for now), run:
+<code class="shell"><pre>sudo gem update rails</pre></code>
+
+And change rails gem in your Gemfile to <strong>gem 'rails', '3.0.3'</strong>
+</body>

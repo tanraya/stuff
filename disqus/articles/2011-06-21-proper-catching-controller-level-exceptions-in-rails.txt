@@ -1,0 +1,34 @@
+title: "Proper catching controller-level exceptions in Rails"
+tags:
+- exceptions
+- rails
+- rails-3
+- rubyshow
+
+<body>
+<p>How to handle the exception in the Rails controller best way? Well, everyone knows that:
+
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768896.js?file=gistfile1.rb"></script></div>
+
+Excellent. But what if in addition we want to handle all other exceptions to show the pretty 500 error page on production? Immediately we've got the idea to write:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768898.js?file=gistfile1.rb"></script></div>
+
+Here's the idea that we do not need to handle each exception separately, as well as all exceptions are derived from <em>Exception</em> so we can handle this Exception and calm down. But no such luck.
+
+Let's take a look what we have:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768899.js?file=gistfile1.rb"></script></div>
+
+At first glance, all is well. But this will not work as expected. The fact that the  <em>ActiveRecord::RecordNotFound</em> exception is inherited from <em>Exception</em>, so the latest <em>rescue_from</em> call will fire for <em>Exception</em> too, so when an any exception raised, <em>:internal_error</em> will be called and this call which will block <em>:page_404</em> call. So we never see 404 page :)
+
+So, how to handle exceptions properly? I came to this decision:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768900.js?file=gistfile1.rb"></script></div>
+
+There's all clear from the example. I just added a branching for handling exceptions to avoid ambiguity as in the second example. Someone may say that we can just add <em>rescue_from Exception</em> at the top, but it will not save you if your colleague unwittingly add the desired rescue_from even higher. Therefore, I prefer for branching as the most obvious and intuitive solution.
+
+<strong>UPD:</strong>
+That article was mentioned in <a href="http://rubyshow.com/episodes/171">RubyShow Episode 171</a>
+</body>

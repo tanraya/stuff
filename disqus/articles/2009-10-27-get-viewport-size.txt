@@ -1,0 +1,14 @@
+title: "Как получить размеры видимой части окна браузера (viewport size)."
+tags:
+- js
+- viewport-size
+
+<body>
+<p>А вот так:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768753.js?file=gistfile1.js"></script></div>
+
+В Mootools лучше делать так:
+
+<div class="gist-wrapper"><script src="https://gist.github.com/1768756.js?file=gistfile1.js"></script></div>
+</body>

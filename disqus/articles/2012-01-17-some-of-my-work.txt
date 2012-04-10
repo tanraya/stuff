@@ -1,0 +1,47 @@
+title: "Кое-что из моей работы"
+tags:
+- activerecord
+- counter_cache
+- default_scope
+- rails
+- rails-3
+- ruby
+- state_machine
+- unscoped
+
+<body>
+<p>Мне тут понадобилось написать функциональность для сайта, которая представляет из себя Консультантов, которым можно задавать вопросы.
+
+О чем я хочу рассказать:
+</p>
+<ul>
+<li>Как использовать state_machine в моделях ActiveRecord</li>
+	<li>Как использовать counter_cache "с условиями"</li>
+</ul>
+Итак, распишем задачу более подробно:
+<ul>
+<li>Будет две модели, Consultor и ConsultorQuestion</li>
+	<li>ConsultorQuestion может быть опубликованным и неопубликованным. Используем<a href="https://github.com/pluginaweek/state_machine" rel="nofollow"> state_machine</a>.</li>
+	<li>По-умолчанию показываются только опубликованные вопросы. Используем default_scope.</li>
+	<li>У Consultor будет счетчик <a href="http://railscasts.com/episodes/23-counter-cache-column?view=asciicast" rel="nofollow">counter_cache</a>, с количеством <em>опубликованных</em> вопросов</li>
+</ul>
+Так как контроллеры никому особо не интересны, я их не буду описывать. Начну сразу с моделей.
+
+Модель Consultor (консультант):
+<div class="gist-wrapper"><script src="https://gist.github.com/1768909.js?file=gistfile1.rb"></script></div>
+Модель Consultor использует STI (<a href="http://rubydev.ru/2011/07/rdr3t-single-table-inheritance-rails/" rel="nofollow">Single Table Inheritance</a>) - наследуется от модели User, так как консультант это такой же пользователь, как и все остальные. Я создал отдельную модель для консультантов потому, что у консультантов есть вопросы (has_many :questions), а у обычных пользователей их нет. Незачем засорять модель User ненужными связями.
+
+Я также определил default_scope, чтобы всегда по-умолчанию выбирались только консультанты, исключая других пользователей. С default_scope сразу начинаются проблемы, так как этот скоуп добавляет условие в каждый SQL-запрос к таблице consultors. И счетчик counter_cache перестаёт работать. Но об этом позже.
+<h3>Об использовании state_machine</h3>
+Давайте посмотрим на модель ConsultorQuestion. Я приведу сразу полную и законченную версию модели, конечно убрав оттуда то, что к делу не относится:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768910.js?file=gistfile1.rb"></script></div>
+Первое, на что обращаешь внимание, это <a href="https://github.com/pluginaweek/state_machine" rel="nofollow">state_machine</a>. У вопроса могут быть два состояния: <em>опубликован</em> или <em>не опубликован</em>. state_machine очень облегчает переходы от состояния к состоянию, хотя это можно сделать и без неё. У вас получится странный код с кучей условий. Я попытаюсь изобразить, что может получиться, если не использовать state_machine:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768911.js?file=gistfile1.rb"></script></div>
+Ужасно, не правда ли? Зацените, сколько условий в коде и сравните это с предыдущим листингом, где нет ни одного условия и все реализуется при помощи коллбэков! В этом и есть сила state_machine - в вызове коллбэков при смене состояния. Чтобы сменить состояние, нам нужно всего лишь вызвать событие publish! или unpublish! в нужный момент. В нашем же случае мы используем коллбэки чтобы менять значение счетчика counter_cache. Помните, в условии было сказано, что нам нужно подсчитывать только опубликованные вопросы?
+<h3>О счётчике counter_cache</h3>
+Вы уже заметили в коде вызовы <code>Consultor.unscoped.decrement_counter</code> и <code>Consultor.unscoped.increment_counter</code>. Так мы меняем значение счетчика counter_cache вручную. Почему? Это стало необходимо потому, что мы используем default_scope в модели и этот скоуп добавляет своё условие к запросу, который обновляет счетчик counter_cache. В результате, счетчик не то что не обновляется, а даже происходит ошибка при выполнении SQL-запроса. Чтобы это исправить, мы вызываем через unscoped стандартные методы <a rel="nofollow" href="http://apidock.com/rails/ActiveRecord/Base/increment_counter/class">increment_counter</a> и <a rel="nofollow" href="http://apidock.com/rails/ActiveRecord/Base/decrement_counter/class">decrement_counter</a>. Unscoped отменяет действие default_scope и запрос выполняется без ошибки.
+
+Еще хочется заметить, что метод sizе берет значение из колонки counter_cache. Чтобы получить реальное количество записей в таблице, можно использовать метод length или метод count.
+
+<h3>Немного о default_scope</h3>
+Стоит с осторожностью пользоваться default_scope и не забывать, что он добавляет условие к каждому запросу. Поэтому, что-то может сломаться или работать не так, как вы ожидаете. Но зато, default_scope помогает улучшить безопасность вашего приложения, помогает защитить данные, которые требуют защиты от случайного просмотра.</body>

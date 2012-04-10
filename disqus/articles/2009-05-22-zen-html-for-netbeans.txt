@@ -1,0 +1,7 @@
+title: "Один хороший человек сделал Zen HTML для Netbeans"
+
+<body><p>Твою меть!
+
+Не могу не поделиться этой новостью: <a href="http://rmcreative.ru">Александр Макаров</a> обновил ааатличную штуку Zen HTML под NetBeans! Yeah!
+
+Читаем и юзаем: <a href="http://rmcreative.ru/blog/post/netbeans-zen-html-1.1">http://rmcreative.ru/blog/post/netbeans-zen-html-1.1</a></p></body>

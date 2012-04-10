@@ -1,0 +1,19 @@
+title: "Получение ответа в виде JSON от Form.Request в Mootools"
+tags:
+- ajax
+- formrequest
+- json
+- mootools
+
+<body>
+<p>В Mootools есть отличное решение для отправки форм при помощи AJAX, это Form.Request. Он позволяет очень просто отправить форму без перезагрузки страницы.
+
+После того, как форма отправлена, вы можете получить ответ в виде html, чистого текста или XML, в зависимости от того, какой заголовок Content-type вы отдаете на стороне сервера. Но чаще всего, нужно получить запрос в виде JSON, а в Form.Request это не предусмотрено.
+
+Давайте посмотрим, как все таки получить нужный нам ответ в JSON:
+
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768758.js?file=gistfile1.js"></script></div>
+
+Смотрите так же <a href="http://mootools.net/docs/more/Forms/Form.Request" rel="noindex,nofollow">документацию по Form.Request</a>
+</body>

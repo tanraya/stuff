@@ -1,0 +1,4 @@
+title: "New Mysql connector for Nodejs"
+
+<body><p>Briefly: here's a new connector to Mysql for Nodejs. In my opinion, it gives great hope)
+So, you can get more info at github page: <a href="http://github.com/Sannis/node-mysql-libmysqlclient">node-mysql-libmysqlclient</a></p></body>

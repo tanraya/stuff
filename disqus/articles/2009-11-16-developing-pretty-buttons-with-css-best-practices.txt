@@ -1,0 +1,59 @@
+title: "Developing pretty buttons with css best practices"
+tags:
+- alpha-channel
+- css-buttons
+- photoshop
+- png
+- pretty-buttons
+- web20-buttons
+
+<body>
+<p>In this article I'll show you how to make beautiful buttons to use these on your web pages using best practices. These buttons are:
+
+</p>
+<ul>
+<li>Use only one picture for all states</li>
+	<li>Has a 3 states: the state of rest, when you hover the mouse and when clicked.</li>
+	<li>Having less of css code.</li>
+	<li>Can be easily embeded into any place of your web pages.</li>
+	<li>The text on the button is just text, not image.</li>
+	<li>Buttons can be of any width.</li>
+</ul>
+As a result, we have got these buttons:
+<p style="text-align: center;"><a href="http://torqueo.net/developing-pretty-buttons-with-best-practices/#more-292"><img class="aligncenter size-full wp-image-299" src="http://torqueo.net/wp-content/uploads/2009/11/preview.jpg" alt="preview" width="598" height="95"></a></p>
+
+
+~
+<h3>Let's begin</h3>
+First, we need to draw those buttons. Open Photoshop and create a new document:
+<p style="text-align: center;"><img class="size-full wp-image-293 aligncenter" title="step1" src="http://torqueo.net/wp-content/uploads/2009/11/step1.jpg" alt="step1" width="551" height="338"></p>
+
+Then, using the <em>Rectangular Marquee Tool</em> select a fixed area, as shown in the picture:
+
+<img class="aligncenter size-full wp-image-294" title="step2" src="http://torqueo.net/wp-content/uploads/2009/11/step2.jpg" alt="step2" width="644" height="206">
+
+Once you've selected so we get this:
+
+<img class="aligncenter size-full wp-image-295" title="step3" src="http://torqueo.net/wp-content/uploads/2009/11/step3.jpg" alt="step3" width="499" height="114">
+
+Then, create a new layer and fill it with black. Further, we only adjust <em>Layer Blending Options</em> and set it up properly. I specifically gave you an example of just started creating buttons, because then everything utterly banal. 	
+You can <a href="/files/pretty-buttons/buttons.psd">download complete psd source</a>, to see what settings I applied to the buttons.
+
+<h3>Next</h3>
+Now, when the buttons are drawn, we can only create a png-file with the buttons, as well as html-markup and css-code. Again, I will not explain everything step by step, as the comments in the file with an example should be sufficient in abundance. Let's enjoy the result of:
+
+[caption id="attachment_297" align="aligncenter" width="598" caption="Click to view online demo"]<a title="View online demo" href="/files/pretty-buttons/buttons-en.html"><img class="size-full wp-image-297" title="View online demo" src="http://torqueo.net/wp-content/uploads/2009/11/result.jpg" alt="View online demo" width="598" height="191"></a>[/caption]
+
+<strong>Important!</strong> My example uses a button with a semitransparent shadow and rounded corners. Naturally, in the png format. As you know, IE6 does not support alpha channel in png, therefore, we are forced to use a "crutch". In my example, there is no such any "crutch". But if you want support for alpha channel in IE6, I strongly recommend you use <a rel="noindex,nofollow" href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD BelatedPNG</a>, is the best solution to date.
+
+So, as you can see, we got quite a good buttons:) I hope you enjoyed this article.
+
+Now you can:
+<ul>
+<li><a href="/files/pretty-buttons/buttons-en.html">View online demo</a></li>
+	<li><a href="/files/pretty-buttons/buttons.psd">Download psd source</a></li>
+	<li><a href="/files/pretty-buttons/buttons-en.zip">Download demo in zip</a></li>
+	<li><a rel="noindex,nofollow" href="http://www.designvitality.com/blog/2007/10/photoshop-button-tutorials/">Read about how you can draw buttons in photoshop</a></li>
+	<li><a rel="noindex,nofollow" href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">Support for alpha channel in png in IE6 (best solution to date)</a></li>
+</ul>
+</body>

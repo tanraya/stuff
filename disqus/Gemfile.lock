@@ -1,0 +1,19 @@
+PATH
+  remote: ../wp-import-dsl
+  specs:
+    wp-import-dsl (0.0.1)
+      nokogiri
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    gist (2.0.4)
+    nokogiri (1.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gist
+  nokogiri
+  wp-import-dsl!

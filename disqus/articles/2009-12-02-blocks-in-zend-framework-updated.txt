@@ -1,0 +1,6 @@
+title: "Обновление кода к статье &quot;Блоки в Zend Framework&quot;"
+tags:
+- zend-framework
+
+<body><p>Я обновил статью <a href="/blocks-in-zend-framework-final-version/"><strong>Блоки в Zend Framework. Финальная версия</strong></a> и добавил в код дополнение, позволяющие передавать параметры главного контроллера в блок.
+Это означает, что когда вы находитесь на странице, к примеру, <em>http://example.com/pages/view/777</em> (где controller - pages, action - view и id - 777), то идентификатор (777) передастся так же в контроллер блока, который вы загружаете на данной странице, где его можно получить стандартным способом: <em>$this-&gt;_request-&gt;getParam('id')</em>.</p></body>

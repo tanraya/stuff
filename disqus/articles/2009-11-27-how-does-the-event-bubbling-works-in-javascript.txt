@@ -1,0 +1,34 @@
+title: "How does the event bubbling works in Javascript?"
+tags:
+- dom
+- event-bubbling
+- javascript
+- jquery
+
+<body>
+<p>Few people knows how events works in <em>javascript</em>.  Currently, many people use frameworks, and do not realize how event works, so they are spend much time on simple things.
+
+I'll tell about a widely known in narrow circles thing such as <em><strong>event bubbling</strong></em>. What I'm talking about?
+
+When we are click on any element on the web page, the event is raised on all the parent nodes of clicked element,  until it reaches the <em>document</em> node. This is event bubbling as is.
+<a href="/files/event-bubbling/wrong.html">Let's see  clearly how it works</a>, it's better to see than tell a thousand words.
+
+~
+
+We have a HTML markup:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768768.js?file=gistfile1.html"></script></div>
+
+We have a CSS:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768772.js?file=gistfile1.css"></script></div>
+
+And, most importantly, there is javascript (JQuery):
+<div class="gist-wrapper"><script src="https://gist.github.com/1768774.js?file=gistfile1.js"></script></div>
+
+As we can see, we have callbacks on dialog click and on document click. Now let's open a <a href="/files/event-bubbling/wrong.html">working example</a> and click on the dialog. What happened? As a result we've got 2 alerts: alert from dialog and from document. Why this happened, we're just clicked on the dialog? The reason is in the event bubbling!
+
+So let's do that when we click on the dialog, then appeared only alert for this dialog. All we need to do is to cancel the event bubbling, so that the event did not rise up the <em>DOM</em> nodes. This can be done simply by adding <em><strong>e.stopPropagation()</strong></em> to dialog click callback. That's all. Let's <a href="/files/event-bubbling/okay.html">see final sample</a>.
+
+So, this is a simple thing - but few know about it. It greatly simplifies the development on javascript. How, for example, without any distortions /you can hide any element by click out of this element/ to make any element on the page when they click into hiding outside this item? Only through event bubbling! Now you know :)
+
+CU.</body>

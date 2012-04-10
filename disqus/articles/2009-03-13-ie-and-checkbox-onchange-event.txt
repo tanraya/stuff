@@ -1,0 +1,14 @@
+title: "IE and checkbox onchange event"
+
+<body>
+<p>Damn, fuckin' Interner Explorer does not works correctly with checkbox "onchange" event.
+IE does not send change event when the checkbox has been clicked, only after the element has lost focus (what a fuck?).
+
+This does not work in Internet Explorer:
+</p>
+<div class="gist-wrapper"><script src="https://gist.github.com/1768623.js?file=gistfile1."></script></div>
+Therefore, we are forced to use an "onclick" event instead of "onchange" event.
+
+This should work in Internet Explorer:
+<div class="gist-wrapper"><script src="https://gist.github.com/1768625.js?file=gistfile1."></script></div>
+I hope that IE developers will change this checkbox behavior in Internet Explorer 8.</body>

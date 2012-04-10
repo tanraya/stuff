@@ -1,0 +1,38 @@
+class ConsultorQuestion &lt; ActiveRecord::Base
+  state_machine :state, :initial =&gt; :unpublished do
+    # Состояния
+    state :unpublished
+    state :published
+
+    # Коллбэки переходов
+    after_transition :unpublished =&gt; :published,   :do =&gt; :inc_counter_cache
+    after_transition :published   =&gt; :unpublished, :do =&gt; :dec_counter_cache
+
+    # События
+    event :publish do
+      transition :unpublished =&gt; :published
+    end
+
+    event :unpublish do
+      transition :published =&gt; :unpublished
+    end
+  end
+
+  # Перед удалением снимаем с публикации. Если состояние изменится
+  # на unpublished, то автоматически произойдет декремент counter_cache
+  before_destroy { unpublish! }
+
+  belongs_to :consultor
+  attr_protected :state, :consultor_id
+
+  validates :questioner_name, :questioner_email, :question,  :presence =&gt; true
+  default_scope with_state(:published).order('created_at DESC')
+
+  def inc_counter_cache
+    Consultor.unscoped.increment_counter('questions_count', self.consultor.id)
+  end
+
+  def dec_counter_cache
+    Consultor.unscoped.decrement_counter('questions_count', self.consultor.id)
+  end
+end

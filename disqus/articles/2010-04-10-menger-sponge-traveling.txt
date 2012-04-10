@@ -1,0 +1,18 @@
+title: "Путешествие по Губке Менгера. Javascript + Canvas."
+tags:
+- canvas
+- javascript
+
+<body>
+<p>Наткнулся на пост у блоггера <a rel="noindex,nofollow" href="http://avva.livejournal.com/2209897.html">avva</a>:
+</p>
+<blockquote>
+<a rel="noindex,nofollow" href="http://www.p01.org/releases/512b_jspongy/jspongy.htm">Совершенно замечательное демо</a> трехмерного путешествия <a rel="noindex,nofollow" href="http://ru.wikipedia.org/wiki/%D0%93%D1%83%D0%B1%D0%BA%D0%B0_%D0%9C%D0%B5%D0%BD%D0%B3%D0%B5%D1%80%D0%B0">по губке Менгера</a>. Смотреть в любом браузере, кроме Эксплорера. Весь код укладывается в 512 байт!
+
+Там используется интересный алгоритм, который называется ray-marching. Должно быть не очень сложным и поучительным упражнением сделать unobfuscation всему этому коду и подробно объяснить, как он работает.</blockquote>
+
+Я рекомендую смотреть демо в Google Chrome или Opera. Особенно рекомендую почитать <a rel="noindex,nofollow" href="http://avva.livejournal.com/2209897.html">комментарии к записи</a> - там рассказывают, как работает код.
+
+Кода всего ничего (512 байт):
+<div class="gist-wrapper"><script src="https://gist.github.com/1768800.js?file=gistfile1.html"></script></div>
+</body>

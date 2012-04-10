@@ -1,0 +1,7 @@
+title: "Darkbox for Mootools"
+
+<body><p>Переписал <a href="http://pepelsbey.net/2009/02/darkbox-2/">Darkbox</a> - javascript для загрузки картинки во всплывающем слое. Оригинальный скрипт был написан<a href="http://pepelsbey.net/author/"> Вадимом Макеевым</a> на jQuery, но мне он не подходил, так как все свои клиентские скрипты я пишу с использованием Mootools.
+
+Поэтому, потратив немного времени, написал порт Darkbox на Mootools.
+
+<a href="http://torqueo.net/files/mootools-darkbox/">Смотреть пример Darkbox for Mootools</a></p></body>
