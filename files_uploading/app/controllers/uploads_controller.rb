@@ -54,6 +54,8 @@ class UploadsController < ApplicationController
 private
 
   def bind_attachment_to(model)
+    return if @attrs.nil?
+    
     @attrs.each do |i, x|
       attachment = Attachment.find(x[:attachment_id]) rescue nil      
       attachment.update_attributes(
@@ -64,6 +66,8 @@ private
   end
 
   def clone_and_cleanup_params
+    return unless params[:upload].has_key?(:attachments_attributes)
+
     @attrs = params[:upload][:attachments_attributes].dup
     params[:upload].delete(:attachments_attributes)
     params.delete(:attachment)

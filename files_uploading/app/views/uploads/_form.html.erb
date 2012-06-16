@@ -7,3 +7,47 @@
 <%= render 'gallery' %>
 <%= render 'upload' %>
 <%= render 'download' %>
+
+<script type="text/javascript">
+$(function () {
+  'use strict';
+  var counter    = 0;
+  var fileupload = $('#fileupload');
+
+  // Initialize the jQuery File Upload widget:
+  fileupload.fileupload({
+    autoUpload : true,
+    url        : '<%= attachments_path %>',
+    type       : "<%= @upload.persisted? ? 'PUT' : 'POST' %>"
+  }).bind('fileuploaddone', function (e, data) {
+    $(document.createElement('input'))
+        .attr('type', 'hidden')
+        .attr('name', 'upload[attachments_attributes][' + counter + '][attachment_id]')
+        .attr('value', data.result[0].attachment_id)
+        .appendTo(fileupload);
+
+    counter++;
+  });
+});
+</script>
+
+<% if @upload.persisted? %>
+  <script type="text/javascript">
+  $(function () {
+    'use strict';
+    var url = '/attachments/attachable/<%= @upload.class.name.underscore %>/<%= @upload.id %>';
+
+    $.getJSON(url, function (files) {
+      var fu = $('#fileupload').data('fileupload'), template;
+      fu._adjustMaxNumberOfFiles(-files.length);
+
+      template = fu._renderDownload(files).appendTo($('#fileupload .files'));
+      
+      fu._reflow = fu._transition && template.length && template[0].offsetWidth;
+      template.addClass('in');
+      
+      $('#loading').remove();
+    });
+  });
+  </script>
+<% end %>
