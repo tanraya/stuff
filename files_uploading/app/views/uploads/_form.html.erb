@@ -1,0 +1,9 @@
+<%= simple_form_for @upload, :html => { :id => :fileupload } do |f| %>
+  <%= f.input :title %>
+  <%= render 'buttonbar', :f => f %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= render 'gallery' %>
+<%= render 'upload' %>
+<%= render 'download' %>

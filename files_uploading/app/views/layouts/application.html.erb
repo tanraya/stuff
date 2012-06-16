@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FilesUploading</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "jquery.fileupload/jquery.fileupload-ui" %>
+  <%= stylesheet_link_tag "http://blueimp.github.com/cdn/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag "http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css" %>
+  <!-- Bootstrap CSS fixes for IE6 -->
+  <!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
+  <%= stylesheet_link_tag "http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css" %>
+
+
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.fileupload/vendor/jquery.ui.widget" %>
+  <%= javascript_include_tag "http://blueimp.github.com/JavaScript-Templates/tmpl.min.js" %>
+  <%= javascript_include_tag "http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js" %>
+  <%= javascript_include_tag "http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js" %>
+  <%= javascript_include_tag "http://blueimp.github.com/cdn/js/bootstrap.min.js" %>
+  <%= javascript_include_tag "http://blueimp.github.com/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js" %>
+  <%= javascript_include_tag "jquery.fileupload/jquery.iframe-transport.js" %>
+  <%= javascript_include_tag "jquery.fileupload/jquery.fileupload.js" %>
+  <%= javascript_include_tag "jquery.fileupload/jquery.fileupload-fp.js" %>
+  <%= javascript_include_tag "jquery.fileupload/jquery.fileupload-ui.js" %>
+  <%= javascript_include_tag "jquery.fileupload/locale.js" %>
+  <%= javascript_include_tag "jquery.fileupload/main.js" %>
+
+  <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
+  <!--[if gte IE 8]><script src="js/cors/jquery.xdr-transport.js"></script><![endif]-->
+
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
