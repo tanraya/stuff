@@ -20,6 +20,8 @@ $(function () {
     url        : '<%= attachments_path %>',
     type       : "<%= @upload.persisted? ? 'PUT' : 'POST' %>"
   }).bind('fileuploaddone', function (e, data) {
+    $('#fileupload-files').css('display', 'block');
+
     $(document.createElement('input'))
         .attr('type', 'hidden')
         .attr('name', 'upload[attachments_attributes][' + counter + '][attachment_id]')
@@ -27,6 +29,8 @@ $(function () {
         .appendTo(fileupload);
 
     counter++;
+  }).bind('fileuploadchange', function (e, data) {
+    $('#fileupload-files').css('display', 'block');
   });
 });
 </script>
@@ -47,6 +51,7 @@ $(function () {
       template.addClass('in');
       
       $('#loading').remove();
+      $('#fileupload-files').css('display', 'block');
     });
   });
   </script>

@@ -21,9 +21,9 @@ window.locale = {
             "uploadedBytes": "Uploaded bytes exceed file size",
             "emptyResult": "Empty file upload result"
         },
-        "error": "Error",
-        "start": "Start",
-        "cancel": "Cancel",
-        "destroy": "Delete"
+        "error": "Ошибка",
+        "start": "Закачать",
+        "cancel": "Отменить",
+        "destroy": "Убрать"
     }
 };

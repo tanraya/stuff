@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'delayed_job_active_record'
 
 # Dragonfly and dependencies
 gem 'dragonfly'

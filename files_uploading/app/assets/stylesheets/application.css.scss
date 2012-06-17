@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+ul.files {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  clear: both;
+  overflow: auto;
+  max-height: 400px;
+  background: #eee;
+  border: 1px inset #ddd;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; 
+  -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.3); 
+
+  li {
+    position: relative;
+    min-height: 80px;
+    margin: 0 0 10px 90px;
+
+    .progress {
+      height: 7px;
+      margin-bottom: 4px;
+    }
+
+    span.cancel, span.class {
+      display: inline-block;
+    }
+
+    /*span.delete {
+      a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #BF1F1F;
+        font-size: 240%;
+        padding: 10px;
+        text-decoration: none;
+        background: #dedede;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        border-radius: 50%;
+
+        &:hover, &:focus {
+          color: #fff;
+          background: #BF1F1F;
+        }
+      }
+    }*/
+
+    a {
+      position: absolute;
+      left:-90px;
+      top:0;
+      display:block;
+      height:80px;
+      width:80px;
+      background: #fff asset-url("jquery.fileupload/loading.gif", image) no-repeat 50% 50%;
+    }
+  }
+}
+
+.fileupload-progress {
+  .progress {
+    height: 7px;
+    margin-bottom: 4px;
+  }
+}
+
+#fileupload-files {
+  display: none;
+  margin: 0 0 7px 0;
+}
+
+.fileinput-button-wrapper {
+  padding: 20px;
+  margin: 0 0 7px 0;
+  background: #dedede;
+  overflow: hidden;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; 
+
+  .fileinput-button {
+    margin: 0 10px 0 0 !important;
+  }
+
+  .fileinput-button-caption {
+    color: #555;
+    display: inline-block;
+    margin: 5px 0 0 0;
+    font-size: 90%;
+  }
+}
+
+.fileupload-progress {
+  padding: 20px 0 0 0;
+}

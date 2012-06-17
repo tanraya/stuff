@@ -25,12 +25,11 @@ class AttachmentsController < ApplicationController
         end
       end
     else
-      render :json => [{:error => "custom_failure"}], :status => 304
+      render :json => [ { :error => @attachment.errors.full_messages } ]
     end
   end
 
   def update
-    raise params.to_json
     @attachment = Attachment.find(params[:attachment])
 
     if @attachment.save
@@ -40,7 +39,7 @@ class AttachmentsController < ApplicationController
         end
       end
     else
-      render :json => [{:error => "custom_failure"}], :status => 304
+      render :json => [ { :error => @attachment.errors.full_messages } ]
     end
   end
 

@@ -22,10 +22,8 @@ class UploadsController < ApplicationController
     respond_to do |format|
       if @upload.save
         bind_attachment_to(@upload)
-        format.html { redirect_to @upload, notice: 'Upload was successfully created.' }
         format.json { render json: @upload, status: :created, location: @upload }
       else
-        format.html { render action: "new" }
         format.json { render json: @upload.errors, status: :unprocessable_entity }
       end
     end
@@ -55,7 +53,7 @@ private
 
   def bind_attachment_to(model)
     return if @attrs.nil?
-    
+
     @attrs.each do |i, x|
       attachment = Attachment.find(x[:attachment_id]) rescue nil      
       attachment.update_attributes(
